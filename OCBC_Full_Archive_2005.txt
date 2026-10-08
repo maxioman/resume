@@ -1,0 +1,323 @@
+Maxious Manohar Benedict 
+# 08-458, Blk 864A 
+Singapore – 520864
+Mobile: +65-81392501
+Email:  maxious@hoshmail.com
+
+
+Over 9 years of Experience in Banking Application Design, Development, Support and Infrastructure Management. Strong Technical Skills in AIX, SYBASE, C++.
+
+Currently  Leading one the  ETL Stream for the BASEL II Program 
+
+Fully conversant with ITIL ,CMM, SDLC Life cycle, coding standards, design patterns, business and technical Analysis ,Test Strategy/Planning/execution, estimation etc.,
+
+Exposure in Information Technology
+
+Operating System
+DOS, Windows, AIX, SUN OS, Linux
+Languages
+Unix C Set ++,Turbo C/C++, Cobol '74, Assembly
+Visual Basic 6.0/5.0, PowerBuilder 5.0/4.0/3.0a
+D.B.M.S
+dBase IV, Foxpro 2.5
+R.D.B.M.S	
+Sybase 12.5, Oracle 8, Sybase SQL Anywhere, Watcom SQL, MS SQL Server 6.2.
+Transaction Server
+Tx Series 5.1 with Sybase XA, Encina
+Internet/Intranet
+MVC, Struts with J2EE on Websphere/Tomcat.
+JDK 1.3,
+Configuration Management
+Clear Case.
+Tools
+ECS/Control-M, Macro 4 Uniq, Citrix Metaframe
+
+OCBC SINGAPORE          			     
+Senior Technical Consultant – BASEL II  	                                  November 2005 onwards
+Contracted from DL Resources,Singapore PTE.
+
+Team Size : Extraction – 2 , Unix & Control-M- 2, ETL Vendor Teams – 10.
+Help deliver development of control framework to drive extraction, load and transform.
+Responsible for merger of BASEL and existing Warehouse (AMP) schedule and arrive at a single schedule.
+Architecture based on guiding principle to decouple dependency of L/T on extraction and allow catch up of multiple day L&T.
+Help lead the ETL development team with specified toolset (C++, Unix Shell Scripting, SSH C:D, Datastage, Synopsis,Teradata MLOAD,etc..)
+Help deployment team to arrive at a detailed rollout approach and suggest/develop adhoc programs to support parallel run of existing ETL system and allow fallback.
+Responsible for build schedule for ETL jobs of upstream/ data Marts for Rating(SAS) and Central Systems (Fermat).
+Set high standards for Production acceptance and ensure security controls adhered in all stages of Project life cycle.
+Co-ordinate with Programme Management Office for WBS tracking and reporting.
+Weekly dash board reporting to Senior Management.
+Plan and Implement Releases/Enhancement for parallel work steams (Ratings/Fermat).
+Adhere Banking security standards, Audit and Guidelines
+
+STANDARD CHARETERED BANK ( International Software Centre – India )  
+Senior Systems Analyst                                                                      Aug 2002 – June 2005
+
+Regional Technical Project management and support for Global Banking Applications.
+Good in-depth understanding of the technical environment of the application support.
+Provide direction for the team in problem troubleshooting and resolution.
+Strong technical prowess in C++/Sybase and mentor team in development and problem fix.
+Responsible for the Business in terms of Technical Requirement Analysis and Design Specifications.
+Manage and Co-ordinate with Local Project and Infrastructure teams to ensure applications Environment are successfully set-up for Unit Testing , SIT and UAT ,data migration till Go live situation.
+Implementation and roll out new projects and deployment.
+Exposure to Change Management, scoping, project scheduling, estimation and Planning 
+Track issues and risks and plan for mitigation.
+Plan and implement periodic h/w and s/w upgrade.
+Ensure CMM Level 3 requirements are met.
+Coordinate, involve & communicate to all parties involved at different stages of the project.
+
+Applications 
+Team Size :-  NCS-20 , MBP-10 , ATLAS-6
+
+Network Custodial Services and Fund Services.
+
+The New Custody System is a 3-tiered system for the custody unit in SCB, which replaced the existing Portfolio Management System. The system has a rich functional flavor, handling trade settlements, corporate action, and custody management, charges, and registration. The system has the capability to interface with depository systems like Jasdec, CCASS and SGX. The Overall architecture of NCS is composed of a Initial tier consisting C++ Objects, middle layer being the CICS transaction processor and the third layer a thin PB4 client. The database is SYBASE System X interfaced from the code through CT Library.
+
+Multi-Business Processing 
+
+MBP is system to enable business processing at multi locations namely at the Hub and spoke.
+MBP is a suite of simple scan and print solutions and combination of service level monitoring process driven work flow systems. MBP system is web based system centered on IBM’s content manager and IBM’s EAI systems like MQ System Integration / MQ Series EAI products. MBP systems are J2EE servlets and beans deployed in a clustered websphere 
+
+Single Customer Identifier ( Wholesale banking and Global Markets) 
+
+SCI is a central repository of standard codes and Customers (Legal Entity) identity. 
+The system also provides mechanism to maintain Key customer attributes like Credit grade and Limits. This system participates in a publish/subscribe facility hosted in the banks messaging middleware system ISIS with other key transaction systems like eBBS(core banking),Hogan(cash system), IMEX (Trade), BASEL II , Helios (D/W and MIS). 
+
+
+
+
+
+Projects
+
+NCS Centralization Project
+Tools Used :  AIX 5.2 /Visual age C++ 6 /SYBASE 12.5.3/Tx Series 5.0.5.0/Encina SFS/ DCE 3.2.
+
+The overall objective of the project is to engineer a centralized deployment framework for the existing NCS implementation in the local IT and ATOS data centers into the new Tier-1 HK ATOS  data centre with due considerations for current and future capacity, interfaces, operational requirements. The objective also includes responsibilities such as testing and support for UAT, conducting dress rehearsal and finally live launch.   Along with the above core objectives the NCS application deployment will be required to adhere to the software version, hardware platforms, naming standards as stated in the new group standards definitions.
+
+Roles:
+Conceive and Own overall effort and schedule plan for the project.
+Accountability to deliver Technical solution for NCS Centralization.
+Technical evaluation of AIX 5.2, TxSeries (CICS) 5.0, Sybase 12.5.3, SNA 6.1.3 and Control-M 6.1 upgrades.
+Understand the dynamics of interfacing from a singular host to multiple mainframe CICS regions and arrive at program, design changes and implementation steps.
+Help to recode the mainframe interface program which uses the IBM SNA API to support parameterized SAN profiles stored in DB.
+Implement remote printing and archival systems with provisions for centralized printing and archival using the Macro 4	Columbus utilities.
+Configure & install NCS application in the target environments as needed as per the laid down standards.
+Plan and conduct SIT, UAT, OAT & SAT.
+Provide AIG, ASRM, DR Procedure, Operator Run sheet.
+
+Single Customer Identifier Release 2.0
+SCI release 2.0 was architected primarily to enable a wider coverage with respect to product processors vis-à-vis geographies. Earlier version based in UK datacenter suffered reach due to its fat applet architecture and proved redundant in Asian and African region.
+The release 2.0 aims a providing a thin client interface making it reachable for the product processing hubs/spokes in virtually all regions. At the same time the release had an application layer to support publish/subscribe support for online automatic XML interface for other application that participated such as eBBS and Hogan.
+
+Roles:
+Provide project management support to monitor development at vendor location.
+Review architecture and provide recommendation for compliance of group support standards with respect to Production support.
+Budget and scope, seek approval for vendor/testing stream effort and cost.
+Review and plan testing environment requirements for cross geographic MQ Point of presence and Tivoli data interface at multiple test host systems.
+Prepare a test strategy for volume/stress test with respect to online performance for http request and also the overall resilience of the background processing for XML pub/sub request coming in from various systems.
+Analyze overall box heath and provide tuning recommendations for Tomcat ,AIX, Oracle, Network interface parameters.
+
+MBP Software Upgrade.
+
+The MBP Suite of application runs on cluster of AIX hardware with proper redundancies built to support complex system software like Network Dispatcher, Policy Director, WAS, Content Manager, MQ Broker, MQ Workflow. The software upgrade project aims at upgrading the version of WAS from 4.0 to 5.0 and MQ Series from 3.0 to 4.0 and MQ Workflow 4.0 to 4.1.
+
+Roles:
+Provide overall direction for the upgrade project.
+Prepare the test strategy, test plan and manage test execution.
+Plan phased upgrade methodology with proper consideration to interoperability between different software versions.
+Plan test environment requirement to suit upgrade path version requirements.
+Test for resilience of redundancies such as HACMP and WAS Model/Clone.
+Test for resilience of the application under stress for volumes of messages from host systems such as Hogan (Payment systems) and IMEX ( Trading Systems).
+Test the overall robustness of the Scan and Print infrastructure/ application layer within the suite with respect to agreed volumes and future trends.
+Plan and conduct SIT, UAT, OAT & SAT.
+Update AIG, ASRM, DR Procedure, Operator Run sheet.
+
+STANDARD CHARTERD BANK, Singapore  
+Systems Analyst – (Securities Services) 			   July 1998 – Aug 2004
+Direct Employee from December 1999 onwards.
+Contracted from Iversion Consulting  from July 1998 to November 1999.
+
+Good understanding of Securities Service Banking business process ,products and Trading systems (NCS,SWIFT,Reuters,Bloomberg,Jasdec,CCASS,JPMS)
+Responsible for Project Migration of regional settlement systems and roll outs to other locations
+Conduct post implementation reviews and address application issues.
+Technical support for NCS applications and system incidents/problems
+Plan and participate in systems and software upgrades
+Evaluate vendor fixes and perform Minimum Acceptance testes.
+Version control and package the fixes and co-ordinate with datacenter personal to apply them.
+Provide expert advice on CICS for midrange and Sybase problem analysis, troubleshooting and performance tuning.
+Development  and Analysis of the test case and test scenarios by liasing with the business users
+Documentation of  key operating and support procedures for the technical components in the Setllement and Clearing Systems Application.
+
+Projects
+
+ISMS (IS role transition to ISCI)
+Played key role in the application IS role transition for projects and support from ISS Singapore to ISCI (A SCB subsidiary in Chennai, India). The role involved in performing related activities in Migration Planning, Resource Planning, Preliminary Due Diligence, Transition, and Steady State stages.
+
+Mid Range Consolidation Project 
+This project required NCS to implemented in a consolidated infrastructure and decommission the distributed implementation at country level in SEMA datacentres (SG,MY,HK).
+
+Roles:
+Responsible to confirm application resilience in a consolidated environment and recommend application changes to a workload (WLM) compatible environment.
+Conduct impact analysis for the application on the new software version of TxSeries 4.3 and Sybase 12.0
+Plan and perform impact analysis for interface communication resilience to host for C:D and SNA for packet encapsulation module implementation (TCP/IP instead of LLC).
+Suggest configuration changes in the application sources to cater online, batch, operator and system maintenance panel comply to the Midrange consolidation requirement set by the banks TAS (Technical Architecture and Standards Group).
+
+NCS Version 3 upgrade 
+Tools Used :  AIX/C++ 3.1.0 /SYBASE 11.9.2/Tx Series 4.3/Encina SFS/ DCE 2.2.
+This project is a combination of technical upgrade of various software versions and application changes for SWIFT 98/2000 compliance.
+
+Roles:
+Impact analysis and Planning for the Sybase and TxSeries upgrade from 11.0.3 to 11.9.2 and 4.2 to 4.3 respectively.
+Gather the table schema changes in view of SWIFT 98 mandatory upgrade and suggest recommendations to optimize new changes, database configuration changes in view of online and EOD performance.
+Perform coding change for the new tags and business logic changes as specified in the CMR document.
+Study applications resilience after the code change vis-à-vis  stress conditions on various scenarios , and then arrive at tuning requirements in various modules/programs  like STP, SWIFT outgoing, GL/Charges background generation, adhoc report generation, online affirmations/settlements etc.
+Suggest CICS parameter tuning to improve application performance/response times for key online functions, which have critical time window to meet.
+Guide the development team for deprecated CICS ECI calls API’s.
+
+
+Japan Production box reconfiguration.
+
+Japan country IT performed a hardware upgrade for the NCS production server from J50 to H80 model and faced acute performance problems despite it being a higher capacity box.
+
+The problems included high batch timings, which caused the batch to slip over online time windows on some days. The critical interface jobs cut-off time window could not be met for quite a number of days. A hot pursuit team was formed, wherein IBM, SYBASE and country IT were part of the team to probe the performance problem at IBM premises.
+
+Participated as SCB representative in charge for solution delivery.
+Participated in several workshops with IBM and Sybase.
+Planned and conducted the performances tests at IBM premises after creating an exact replica environment.
+Collated IBM/Sybase suggestions on AIX and Database configurations and prioritised them.
+Suggested several combinations of parameter change.
+Implemented and measured system performance for each of these combinations.
+Successfully concluded the exercise after choosing the best configuration with an amazing performance gain of more than 200% on batch job timings.
+Performance gain in online times for critical settlement functions went up by 60%.
+Received special award and recognition from the JP Securities Services head and IT head
+
+NCS implementation in SCB Taiwan and Indonesia
+
+Roles:
+Planning and commissioning of new hardware and software infrastructures like the RS6000, Sybase, CICS regions etc.
+Planning and listing all configuration items required to rebuilt and configured for the various interfaces like HOGAN (Cash System), MSA (GL System), GAMX (swift), and price feed etc.
+Design and coding of the price feed interface with the Reuters feed in C++/SYBASE.
+Coding of the interface with the local Dividend Tax System in C++/SYBASE.
+Configure various interface sub system and if need be, develop new sub system like price feed interface with the country stock exchange with due considerations like download from internet, manual upload etc.
+Version tracking and migration.  
+Build and configure the EOD/BOD scheduling net in control-M based on the sites requirement.
+Configure EOD/Online print queues (LPD and UniQ) , printers and report archival sub system (STORQM) 
+Conduct Security Acceptance Test (SAT) and Operational Acceptance Test (OAT).
+Prepare the run sheet, ASRM and train Operators in the Group Technology Office.
+Support Conversion Team by providing the required infrastructure.
+Support Users for UAT/Delay Parallel Run and Pre/Post cut over.
+Hand Over of the site to production support team after providing one month system support.
+
+
+POLARIS SOFTWARE LABS, CHENNAI.
+Consultant Projects                                                             June 1997 to June 1998
+ 
+SABRE, Citibank Group Technology Office, Singapore
+
+SABRE is a consumer banking application i able to greet customers through a variety of means (ie. Customer number, account number, IC/PP number etc..,) and do banking transactions or enquiry with them. The system integrates five functionalities using the patented module called GDM (Graphical Desktop Mangers) software developed by TTI Inc USA. The SABRE is a 3 Tier Architecture application with the business services written in COBOL/DB2 served through CICS Transaction Server, VB Client. The VB client uses SNA communication to talk to the host. Branch specific static data resided in the branch and central MS SQL Server.
+
+Tools Used: Visual Basic 3.0 with DB2 through Citibank’s patented MLI Architecture
+
+Roles:  
+Coding of new change request in Financial Services module.
+Coding new MLI’S required as part of GAPS Analysis.
+Provide fixes for problem reported by country users.
+
+Project Leader - INSPIRE (From June 97 to Dec 97)
+
+INSPIRE (INtegrated Software Process Improvement & REgulation) is a powerful and streamlined tool that provides project planners and developers with an easy and efficient method of planning, executing and controlling a project. INSPIRE includes exception reports, cumulative plan displays, effort and time utilisation queries, and much more. Planners and developers can review and confirm project plans or reschedule existing ones. In addition, through the integration with methodologies and calendars, INSPIRE can automatically generate consistent work plans that can be tracked
+
+Tools used : Visual Basic 4.0 with Oracle 7.1 & Visual Basic 5.0, Active X ASP, HTML, VB Script and SQL Server 6.5.
+
+Roles:
+Requirement Specifications from the Quality Team and SEPG.
+Technical design and Coordinate Development activities
+Code Walk through and enforce the standards and quality
+Conduct System Integration Testing and organize support for UAT.
+Implementation / programming of specifications or change requests
+Documentation review and update
+
+
+
+
+
+TITANICS INDIA LIMITED - CHENNAI.
+Project Leader                                                                          Sept 1995 to June 1997
+
+Project Leader – Product development.
+
+Involved in conceptualization, design, development and implementation of financial products including Exchequer, Foreman, and Mobilizer.
+
+Roles:
+Overall design authority for financial applications
+Engage with client directly for application requirement for product customization 
+Work with the sales team to provide pre-sales support.
+Work on demo or pro-type of the products for variants.
+Manage a team of young and dynamic developers.
+Prepare test and exception case and conduct tests.
+
+EXCHEQUER
+This is a specialized financial accounting software providing facilities for multi-branch, multi-department, multi-cost centre accounting.  
+
+Tools Used: Power builder 3.0 and Watcom SQL.
+
+MOBILIZER
+This is the package for the non-banking financial companies dealing with fixed deposits loans, recurring deposits and small scale savings.  The package provides screens to create the schemes of the various financial products, where different parameters like principle, rate of interests, maturity period, type of interest, warrant availability are also given. Once the schemes are created they can be used to perform various transactions like accepting fixed deposits, RD instalment collection, loans issue and repayment against FD/RD or collateral’s.
+
+Tools Used: Power builder 3.0a and Watcom SQL..
+
+FOREMAN
+Foreman is a specialised software package for the non-banking financial institutions dealing with short and long term Chit Services with integrated accounting engine.
+
+Tools Used: Power Builder 3.0 with Sybase System X.
+
+Growmore Solutions - Chennai
+Analyst Programmer                                                                      May 94 to July 1995
+
+Member of a product development team for a stevedoring application called FASTSTEVE.
+Tools Used: Visual Basic 3.0/Powerbuilder with MS-Access / Watcom SQL.
+Role:  Program/database design, Coding
+
+ 
+CAREER ACHIEVEMENTS , AWARDS WON
+
+NCS Centralization Project was recognized by the group and was awarded the Group Value Champion Award.
+Won recognition from JP IT head for my part in the NCS Reconfiguration Project.
+ISCI Quality Evangelist for participating and help achieve CMM Level 3 drive.
+
+
+EDUCATION
+
+Academic Qualification
+B.Sc. Mathematics – Loyola College,  April 1994
+Higher Secondary – N.S.N Matriculation Hr Sec, April 1991 
+Matriculation - N.S.N Matriculation Hr Sec, April 1989
+
+Technical Qualification
+Higher Diploma in Software Engineering, Apple Industries Limited Chennai, Feb 1993.
+Diploma in Computer Application, N.C.C., United Kingdom, Aug. 1992
+Advanced Diploma in R.D.B.M.S. (Sybase), Software Solution Integrated Ltd.,Chennai, Dec. 1995
+
+Courses attended
+Service Management – Standard Chartered, Singapore
+Information Security and Risk Management – Standard Chartered, Singapore
+Websphere Administration – Troy Systems, Through SCB Singapore.
+CMM Level 3 – Scope International Chennai.
+
+
+
+
+
+
+
+
+
+                                                        
+
+PAGE  
+
+
+PAGE  1
+
+
+
+

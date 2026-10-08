@@ -1,0 +1,166 @@
+MAXIOUS MANOHAR BENEDICT
+Dubai, United Arab Emirates (Singapore Permanent Resident)
+Phone: +971 527 752 927, +65 8925 4729
+Email: manohar.benedict@gmail.com
+LinkedIn: https://www.linkedin.com/in/maxious-manohar-benedict/
+
+================================================================================
+TARGET ROLE: ENTERPRISE AI TRANSFORMATION LEADER
+(Target Operating Model Strategist | Chief AI & Platform Architect | VP Enterprise Transformation)
+Target Verticals: BFSI | Retail | FMCG | Multi-Entity Global Enterprises
+================================================================================
+
+EXECUTIVE PROFILE & TRANSFORMATION THESIS
+--------------------------------------------------------------------------------
+Enterprise Transformation Leader and Principal Systems Architect with 28+ years of experience engineering mission-critical operating models, complex information pipelines, and technology platforms across Tier-1 Banking, Retail, and global conglomerates.
+
+Specialized in enterprise Target Operating Model (TOM) redesign: dismantling monolithic organizational friction and redrawing end-to-end information and processing value streams across legacy ERPs, core ledgers, middle/back-office operations, batch reconciliations, and digital touchpoints.
+
+TRANSFORMATION THESIS:
+True enterprise AI transformation is not disconnected "automation" or "high-speed processing" widgets. It is the architectural discipline of:
+1. Mapping the end-to-end value stream of information, state validation, approvals, and financial movements (order booking, inventory, settlement, cash flow, GL posting, and regulatory compliance).
+2. Deconstructing monolithic legacy "lego blocks" and wrapping them with deterministic AI agents, cognitive validation pipelines, and strict exit criteria.
+3. Establishing uninterrupted Operational Oversight: placing fundamental data probes, telemetry sensors, and human-in-the-loop (HITL) guardrails across hybrid pipelines (Straight-Through Processing, batch workflows, and manual escalations) to guarantee retained accountability, regulatory compliance, and strict SLA governance.
+
+Demonstrated commercial and operational track record:
+- Built and scaled a technology services business unit from USD 500K to USD 30M+ (60x growth), managing 500+ professionals across 5 business units.
+- Pioneered global hub-and-spoke processing consolidation at Standard Chartered (Project Cocteau / Multi-Business Platform) that centralized cross-border execution while enforcing local regulatory SOPs and approvals—the direct operational precursor to modern agentic AI architectures.
+- Architected end-to-end multi-tier platforms at Stardomes (IdP, out-of-band 2FA, digital banking, and CWS tactical surveillance) using specification-driven autonomous agent pipelines (Claude Code, LangGraph) with end-to-end auditability.
+
+CORE COMPETENCIES & ENTERPRISE ARCHITECTURE FRAMEWORK
+--------------------------------------------------------------------------------
+- Enterprise Target Operating Model (TOM): Value Stream Mapping, Operational Oversight Readiness Assessment, Hub-and-Spoke Back-Office Redesign, Shared Services Rationalization, End-to-End SLA Architecture.
+- AI Transformation of Legacy Estates: Legacy "Lego Block" AI Wrapping, Cognitive Extraction & Validation, Deterministic Exit Criteria Design, Hybrid Execution Pipeline Orchestration (STP, Batch, Human-in-the-Loop).
+- Operational Oversight & Guardrail Design: Probes & Telemetry Sensor Placement, Audit Trail Lineage, Maker-Checker Dual-Authorization, Operational Risk & Control Self-Assessment (RCSA), Anomaly Detection, Balance Sheet Sanity Checks.
+- Agentic & Generative AI Systems: Specification-Driven Development (Claude Code), Multi-Agent Process Orchestration (LangGraph), Self-Hosted LLMs (Llama, Mistral), RAG & Vector DBs, NVIDIA NIM, GPU Direct (RAPIDS/DALI).
+- Identity, Security & Tactical Infrastructure: Custom Identity Provider (IdP) Architecture, Out-of-Band Satcom 2FA/MFA, OAuth 2.0 / OIDC, Zero Trust, CWS (Connect Watch Secure) AI Surveillance & Situational Platform, Satcom IoT Firmware.
+- Core BFSI, Retail & FMCG Domain: Core Banking (Loans, Deposits, Collateral), General Ledger & Financial Accounting Hub (FAH), Multi-Entity Reconciliation, Funds Transfer Pricing (FTP), IFRS 9 / IFRS 17, Basel II/III/IV (AIRB, LCR, NSFR), OJK/BI Antesena Regulatory Reporting, Trade Settlement & Custody.
+- Data Platforms & Enterprise Integration: Apache Iceberg, MinIO S3 Object Storage, Trino, ClickHouse, Apache Spark, Kafka, BMC Control-M, Tivoli, IBM WebSphere, API Gateways (Kong, Axway), Bare-Metal Talos Kubernetes.
+- Commercial & Executive Governance: P&L Management (USD 30M+), 500+ Multi-Disciplinary Team Leadership, CxO Advisory, Vendor & System Integrator Management, ITIL Service Delivery, CMM Level 3.
+
+PROFESSIONAL EXPERIENCE
+--------------------------------------------------------------------------------
+
+STARDOMES | Dubai, United Arab Emirates
+Chief Technology Officer / Head of Platform Architecture
+April 2025 - Present
+Accountable for platform architecture, operating model definition, and AI engineering delivery across an integrated, high-assurance ecosystem spanning an Identity Provider (IdP), out-of-band Two-Factor Authentication (2FA), digital banking applications (web and mobile), satellite IoT firmware, and the CWS (Connect Watch Secure) AI situational platform.
+
+- End-to-End Value Stream Architecture: Architected and delivered an integrated cross-functional value chain connecting digital customer touchpoints, cryptographic identity verification, core banking ledger integration, satellite IoT firmware, and real-time surveillance operations.
+- Operational Oversight & Guardrails in IdP & 2FA:
+  * Designed 2FA cryptographic binding integration between banking core backends and the proprietary IdP, enforcing strict registration/deregistration lifecycles, immutable audit data models, and MFA session state machines.
+  * Solved connectivity-failure edge cases by engineering an out-of-band satellite MFA delivery layer utilizing BLE GATT profiles and broadcast protocol emulation, enabling continuous operational continuity independent of terrestrial telco networks.
+  * Integrated the IdP across enterprise banking workflows, embedding automated enrollment state machines and dual-authorization maker-checker approval controls for high-risk corporate and retail operations.
+- CWS (Connect Watch Secure) AI Tactical Platform:
+  * Architected CWS, a multi-tier AI-powered situational command, threat surveillance, and operational dispatch network fusing edge computer-vision inferencing, centralized predictive analytics, and satellite telemetry backhaul.
+  * Embedded end-to-end operational probes and sensory telemetry across mission-critical workflows (border protection, VIP dynamic security routing, and tactical incident response), ensuring human-in-the-loop validation and audit tracking under zero-trust conditions.
+- Pioneering Agent-Driven Development Methodology:
+  * Established an enterprise agent-driven delivery methodology: decomposed full-stack system architecture into unambiguous technical specification contracts executed autonomously by Claude Code across 10 concurrent workstreams (5 backend services, 5 frontend modules), achieving unprecedented cycle speed, mathematical rigor, and zero architectural drift.
+- Agentic QA & Autonomous SLA Verification:
+  * Architected a multi-agent test automation framework using LangGraph to coordinate autonomous testing agents driving Playwright (web), Appium (mobile), and Postman/Newman (API microservices), automating end-to-end regression across multi-factor authentication paths, approval state machines, and audit log validation.
+- Modern Banking Web Frontend:
+  * Spearheaded and built the reference banking web application utilizing modern React 18, TypeScript, Vite, Redux Toolkit, and modular UI components.
+- Sovereign AI Infrastructure:
+  * Directed technical scoping and architecture for sovereign defense AI compute initiatives (multi-tier GPU clusters with NVIDIA NIM inference and high-density NVMe storage).
+
+
+INDEPENDENT ADVISORY | Singapore
+Principal Consultant & Enterprise AI Advisor
+May 2024 - Feb 2025
+Advising CxOs and transformation steering committees across Tier-1 ASEAN banks, AI platforms, and enterprise conglomerates on Target Operating Model (TOM) redesign, legacy wrapping, and operational oversight readiness.
+
+- Botminds.ai / MUFG-group bank (Philippines): Redesigned retail and SME loan origination, wrapping legacy core banking with AI ICR/OCR, repair agents and human-in-the-loop exception queues.
+- Tier-1 ASEAN bank: Architected Kubernetes GPU compute with NVIDIA NIM for document extraction and local LLM inference, with validation guardrails on regulatory data.
+- InnData: Advised on a self-hosted natural-language-to-SQL engine and a 35-node, 1 PB on-premise lakehouse (MinIO, Trino, Iceberg), with probes for query lineage and ledger reconciliation.
+- Infigos / Sinarmas Group: Built transaction fraud surveillance and a group-wide synthetic-identity fraud-ring database; validated IFRS 4 to IFRS 17 transition models.
+- Enterprise Cloud & Web3 Infrastructure: Built blockchain strategy for FootballGoalCoin; orchestrated bare-metal Kubernetes migrations into Talos OS; designed high-throughput S3 backup and disaster-recovery topologies.
+- HM Land Registry conveyancing automation (PCC-AI, UK); blockchain strategy for FootballGoalCoin; Talos bare-metal Kubernetes and S3 disaster-recovery design.
+
+
+MinIO | Singapore
+Executive - APAC Solutions & GTM Leader
+October 2023 - May 2024
+Advised enterprise CIOs/CDOs across APAC on modernizing fragmented data silos into high-performance, unified AI-ready data lakehouse architectures.
+
+- Architected modern data lakehouse strategies based on MinIO object storage for premier regional financial institutions, displacing legacy HDFS architectures with S3/MinIO, Apache Iceberg, and Trino.
+- Led high-stakes proofs-of-concept (POCs) proving multi-gigabyte/sec throughput, query federation performance, and drop-in compatibility across enterprise ETL/ELT pipelines.
+- Designed analytical infrastructure reviews for large-scale regulatory reporting systems built on ClickHouse and MinIO.
+- Delivered a federated query and reporting environment for the region's largest forestry conglomerate utilizing MinIO, Dremio, and Apache Superset.
+
+
+LENTRA.AI | Singapore
+Regional Solution Leader - ASEAN
+December 2022 - August 2023
+Led GTM and enterprise solution architecture for Lentra's SaaS digital lending platform across Southeast Asia, optimizing multi-party workflow collaboration and operational oversight.
+
+- Value Stream Re-Engineering: Mapped customer journeys across assisted and self-onboarding loan touchpoints, orchestrating disparate functional units (sales, verification, credit underwriting, operations) into a single SLA-governed pipeline.
+- Algorithmic Decisioning & Policy Guardrails: Embedded dynamic risk scorecards, policy decision trees, and e-KYC/e-signature verification checkpoints into straight-through lending journeys.
+- Massive Scale Data Modernization: Architected and executed deduplication of 80 million customer records (CIF) using facial biometrics and multidimensional identity data for a premier Philippine digital wallet.
+
+
+NTT INDONESIA TECHNOLOGY | Jakarta, Indonesia
+Solutions Leader - Digital Transformation & Architecture
+January 2020 - May 2022
+Directed enterprise solution portfolio, IT modernizations, and delivery architecture across top banks, automotive conglomerates, and retail entertainment giants.
+
+- Digital Transformation Practice Leadership: Led 130+ professionals (Enterprise Architects, Business Analysts, Full-Stack Developers, QA Engineers) and a Service Architecture team of 5+ Architects and 50+ BAU operational engineers.
+- Core Value Stream Modernization: Spearheaded large-scale containerization (Kubernetes/Docker), API gateway integration, and ERP modernization (AP/AR, billing, vendor management, asset management).
+- Banking & Insurance Enterprise Systems: Deployed core BFSI platforms covering asset/liability trading, digital banking general ledgers, customer 360 real-time data lakes, and agency portals for multinational insurers.
+- Operational SLA & Governance: Instituted ITIL-compliant Day-2 delivery support models, multi-year engagement cost estimation, and profitability tracking across enterprise accounts.
+
+
+PT EMERIO INDONESIA / NTT DIGITAL BUSINESS SOLUTIONS | Jakarta, Indonesia
+Director - Delivery, Products and Presales
+February 2007 - January 2020
+Drove the commercial and operational scaling of PT Emerio / NTT DBS over a 13-year tenure, transforming the firm from a USD 500K boutique into a USD 30M+ market leader.
+
+- 60x Commercial Scaling & P&L Leadership: Scaled annual revenue from USD 500,000 in 2007 to over USD 30 Million by 2020; established 5 autonomous, profitable Business Units with 500+ employees across BFSI verticals and technology horizontals.
+- Delivery Governance: Maintained executive oversight of 200+ annual project deliverables across 50+ enterprise clients, consistently sustaining a schedule and cost variance of under 5%.
+- Regulatory Reporting Product Innovation:
+  * Conceptualized, built, and commercialized Emerio's proprietary financial data model and regulatory reporting suite for Bank Indonesia / OJK Antesena (LBU, LBBU, SLIK, LKPBU) across 10+ major banks; two client implementations received prestigious industry awards as national benchmark deployments.
+  * Directed mission-critical implementations of Basel II / Basel III (AIRB, LCR, NSFR, XBRL), IFRS 32/39, and IFRS 9 across Standard Chartered Bank Indonesia, Bank Permata, and Commonwealth Bank Indonesia.
+- Enterprise Finance Transformation: Spearheaded enterprise deployments of Oracle Financial Services Applications (OFSAA), Oracle General Ledger with FAH, Hyperion Planning & Budgeting, and Funds Transfer Pricing (FTP) across Bank Danamon, Bank BTPN, PNM, Bank BCA, Bank Panin, and Cinema 21.
+
+
+FOUNDATIONAL ENTERPRISE OPERATIONS & HUB-AND-SPOKE REDESIGN
+--------------------------------------------------------------------------------
+The direct operational precursors to modern AI agent wrapping:
+
+- OCBC Singapore | Extraction & Scheduling Lead - BASEL II Program | 2005 - 2007
+  Integrated legacy AMP data warehouses with the central BASEL II repository using Teradata MultiLoad/FastLoad scripts. Optimized batch job scheduling (BMC Control-M) and system resource allocation to guarantee mission-critical regulatory SLAs.
+
+- Standard Chartered Scope International | Product Manager & Engineering Head | 2002 - 2005
+  Overall Head for ISCI Custody, Multi-Business Platform (MBP), and ATLAS teams (100+ vendor engineers across TCS and HCL).
+  * Operating Model Centralization (Project Cocteau): Implemented a centrally hubbed multitenant architecture in the Atos Hong Kong Data Center for the New Custody System (NCS), centralizing operational execution while preserving local entity regulatory compliance, sign-offs, and SOPs.
+  * Credit Limit Management (SCI 2.0): Implemented the bank's strategic platform for centralized Credit Limit Management across international branches, introducing real-time exposure monitoring with local branch authorization gates.
+
+- Standard Chartered Bank Singapore | Systems Analyst (SEA) | 1998 - 2002
+  Provided baseline production and operational support across 10 countries; developed SWIFT/Hogan/Sybase interfaces and Control-M scheduling automation for 1,000+ daily EOD/BOD batch jobs.
+
+- Polaris Software Lab | Consultant | 1997 - 1998
+  Developed user interfaces and CICS mainframe messaging interfaces for the Citibank SABRE project.
+
+
+EDUCATION & CREDENTIALS
+--------------------------------------------------------------------------------
+- Oxford Blockchain Strategy Programme (Grade: 88%)
+  Saïd Business School, University of Oxford, 2022
+
+- Bachelor of Science (B.Sc.) in Mathematics
+  Loyola College, Chennai, India, 1994
+
+- Higher Diploma in Software Engineering (Average: 88%)
+  Apple Industries Ltd, Chennai, India, 1993
+
+- Diploma in Computer Applications (Average: 77%)
+  NCC Education, United Kingdom, 1992
+
+- Advance Diploma in RDBMS (Sybase / PowerBuilder - Grade A)
+  Software Solutions Integrated Ltd, 1995
+
+Professional Training & Certifications:
+- IFRS 9 Certification - PricewaterhouseCoopers (PwC) through NTT
+- Information Security and Risk Management - Standard Chartered Bank, Singapore
+- ITIL Service Management & Business Continuity - Standard Chartered Bank, Singapore
+- IBM WebSphere System Administration - Troy Systems / SCB Singapore
+- CMM Level 3 Software Engineering Process - Scope International
