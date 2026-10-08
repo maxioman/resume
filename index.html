@@ -1,1000 +1,2139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maxious Manohar Benedict | Enterprise AI Transformation</title>
-<meta name="description" content="Enterprise AI transformation with end-to-end processing oversight. Target operating model redesign for banks and regulated enterprises.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#F3F5F7;--card:#FFFFFF;--ink:#12263A;--text:#24313D;--muted:#5B6B7A;--rule:#D5DCE3;
-  --signal:#E8A33D;--signal-text:#A86A12;--teal:#2F8F83;--panel:#12263A;--panel2:#1B3349;--panel-text:#C9D4DF;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;background:var(--paper);color:var(--text);font:400 17px/1.6 "IBM Plex Sans",Arial,sans-serif}
-a{color:var(--ink)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:3px;border-radius:4px}
-h1,h2,h3{font-family:"IBM Plex Serif",Georgia,serif;color:var(--ink);font-weight:600;line-height:1.2;margin:0}
-.wrap{max-width:1160px;margin:0 auto;padding:0 28px}
-.nav{position:sticky;top:0;z-index:10;background:rgba(243,245,247,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
-.brand{font:600 17px "IBM Plex Serif",serif;color:var(--ink);text-decoration:none}
-.nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:15px}
-.nav ul a{text-decoration:none;color:var(--muted)}
-.nav ul a:hover{color:var(--ink)}
-.nav .cv{font-weight:500;color:var(--ink);border:1px solid var(--ink);padding:6px 14px;border-radius:6px;text-decoration:none;font-size:15px;white-space:nowrap}
-.hero{padding:72px 0 40px}
-.hero h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.015em;max-width:20ch}
-.hero .sub{font-size:19px;color:var(--muted);max-width:60ch;margin:20px 0 0}
-.who{margin:28px 0 0;font-size:16px;color:var(--text)}
-.who strong{color:var(--ink)}
-.actions{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
-.btn{font:500 16px "IBM Plex Sans",sans-serif;padding:11px 20px;border-radius:6px;text-decoration:none;border:1px solid var(--ink)}
-.btn.primary{background:var(--ink);color:#fff}
-.btn.ghost{color:var(--ink)}
-.board{background:var(--panel);color:var(--panel-text);border-radius:14px;padding:28px 28px 24px;margin:44px 0 0}
-.board-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
-.board-head h2{color:#fff;font-size:22px}
-.board-head p{margin:6px 0 0;font-size:15px;max-width:62ch}
-.toggle{display:inline-flex;background:var(--panel2);border-radius:8px;padding:4px}
-.toggle button{font:500 15px "IBM Plex Sans",sans-serif;color:var(--panel-text);background:none;border:0;padding:8px 16px;border-radius:6px;cursor:pointer}
-.toggle button[aria-pressed="true"]{background:#fff;color:var(--ink)}
-.stream{display:grid;grid-template-columns:repeat(7,1fr);gap:0;margin-top:26px;position:relative}
-.stage{position:relative;padding:0 6px}
-.stage .sys{font-size:12.5px;color:#8FA3B6;height:36px}
-.stage .box{background:var(--panel2);border-radius:8px;padding:12px 10px 10px;min-height:150px;display:flex;flex-direction:column;gap:8px;border:1px solid transparent;transition:border-color .3s}
-.stage .box.changed{border-color:var(--teal)}
-.stage .name{font:600 16px "IBM Plex Serif",serif;color:#fff}
-.mode{font-size:13px;line-height:1.3;padding:5px 8px;border-radius:5px;background:#2A4560;color:#E3EAF1}
-.mode.ai{background:var(--teal);color:#fff}
-.hitl{font-size:12.5px;color:var(--signal);display:none;align-items:center;gap:6px}
-.hitl.on{display:flex}
-.hitl::before{content:"";width:9px;height:9px;border:2px solid var(--signal);border-radius:50%}
-.owner{margin-top:auto;font-size:12.5px;color:#8FA3B6}
-.probe{position:absolute;right:-7px;top:96px;width:14px;height:14px;background:var(--signal);transform:rotate(45deg);z-index:2;border:2px solid var(--panel)}
-.stage:last-child .probe{display:none}
-.rail{grid-column:1/-1;height:2px;background:#2A4560;position:absolute;left:0;right:0;top:103px;z-index:0}
-.legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:20px;font-size:14px}
-.legend span{display:inline-flex;align-items:center;gap:8px}
-.k-probe{width:10px;height:10px;background:var(--signal);transform:rotate(45deg)}
-.k-ai{width:14px;height:10px;background:var(--teal);border-radius:2px}
-.k-hitl{width:10px;height:10px;border:2px solid var(--signal);border-radius:50%}
-.board-note{margin:16px 0 0;color:#fff;font-size:16px;min-height:26px}
-section{padding:72px 0 0}
-.sec-head{max-width:64ch;margin-bottom:30px}
-.sec-head h2{font-size:clamp(28px,3.4vw,38px)}
-.sec-head p{color:var(--muted);margin:12px 0 0}
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:2px solid var(--ink);counter-reset:s}
-.steps li{padding:18px 18px 0 0;counter-increment:s}
-.steps li::before{content:counter(s);font:600 34px "IBM Plex Serif",serif;color:var(--signal-text);display:block;line-height:1}
-.steps h3{font-size:19px;margin:10px 0 6px}
-.steps p{margin:0;font-size:15.5px;color:var(--text)}
-.pipes{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;align-items:center}
-.pipes b{font-weight:600;color:var(--ink);font-size:15px;margin-right:6px}
-.pipes span{font-size:14px;padding:5px 12px;border-radius:20px;background:var(--card);border:1px solid var(--rule)}
-.pipes span.ai{background:var(--teal);border-color:var(--teal);color:#fff}
-.heritage{display:grid;grid-template-columns:1fr 1fr;gap:20px 48px}
-.heritage div{border-left:3px solid var(--teal);padding:2px 0 2px 18px}
-.heritage h3{font-size:18px}
-.heritage p{margin:6px 0 0;font-size:15.5px}
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
-.filters button{font:500 14.5px "IBM Plex Sans",sans-serif;padding:7px 14px;border-radius:20px;border:1px solid var(--rule);background:var(--card);color:var(--text);cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
-.work{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
-.work > li{display:grid;grid-template-columns:220px 1fr 160px;gap:24px;padding:18px 0;border-bottom:1px solid var(--rule)}
-.work > li[hidden]{display:none}
-.work .who-c{font-weight:600;color:var(--ink);font-size:15.5px}
-.work .yr{font-size:14px;color:var(--muted);margin-top:2px}
-.work h3{font-size:18px;margin-bottom:4px}
-.work p{margin:0;font-size:15.5px}
-.work .tag{font-size:13.5px;color:var(--signal-text);text-align:right}
-.work details{margin-top:8px;font-size:15px}
-.work summary{cursor:pointer;color:var(--ink);font-weight:500;font-size:14.5px}
-.work details ul{margin:6px 0 0;padding-left:18px}
-.work details li{display:list-item;border:0;padding:2px 0}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.chips span{font-size:12.5px;padding:2px 9px;border-radius:12px;background:#E6EBF0;color:var(--text)}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maxious Manohar Benedict | Enterprise AI Transformation Leader & Target Operating Model Architect</title>
+  <meta name="description" content="Executive portfolio of Maxious Manohar Benedict: 28+ years driving Enterprise AI Transformation, Target Operating Models (TOM), Sovereign GPU Compute, Modern Lakehouses, and Tier-1 Banking Architectures.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-.dg-grid{display:grid;grid-template-columns:1fr;gap:28px}
-.dg{min-width:0;margin:0;background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:24px 24px 20px}
-.dg h3{font-size:21px;margin-bottom:14px}
-.dg-scroll{overflow-x:auto}
-.dg svg{display:block;width:100%;min-width:720px;height:auto;font-family:"IBM Plex Sans",Arial,sans-serif}
-.dg figcaption{margin:14px 0 0;font-size:15.5px;max-width:78ch}
-.rel{margin-top:12px;font:500 14px "IBM Plex Sans",sans-serif;padding:7px 14px;border-radius:6px;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
-.dg .bx{fill:var(--paper);stroke:var(--rule);stroke-width:1.2}
-.dg .hub{fill:var(--ink)}
-.dg .aib{fill:var(--teal)}
-.dg .mw{fill:#E6EBF0;stroke:var(--rule)}
-.dg .tint{fill:#FCF1DE;stroke:none}
-.dg .pill{fill:#FCF1DE;stroke:var(--signal);stroke-width:1}
-.dg .t{fill:var(--ink);font-size:14.5px}
-.dg .ts{fill:var(--muted);font-size:12.5px}
-.dg .ts2{fill:var(--ink);font-size:13px}
-.dg .tw{fill:#fff;font-size:15px}
-.dg .tws{fill:#C9D4DF;font-size:12.5px}
-.dg .tn{fill:var(--signal-text);font-size:12px;font-weight:600}
-.dg .tb2{fill:var(--signal-text);font-size:20px;font-weight:600;font-family:"IBM Plex Serif",Georgia,serif}
-.dg .b{font-weight:600}
-.dg .ar{stroke:var(--muted);stroke-width:1.4;fill:none}
-.dg .ar.ai{stroke:var(--teal);stroke-width:2}
-.dg .ar2{stroke:#9AA8B5;stroke-width:1.2}
-.dg .ah{fill:var(--muted)}
-.dg .aha{fill:var(--signal)}
-.dg .pr{fill:var(--signal);stroke:#fff;stroke-width:2}
-.dg .hl{fill:#fff;stroke:var(--signal);stroke-width:2.5}
-.dg .ok{fill:var(--signal)}
-.dg .okm{stroke:#fff;stroke-width:2;fill:none}
-.dg .sep{stroke:var(--rule);stroke-dasharray:4 4}
-.dg .dd{stroke:var(--signal);stroke-width:1.6;fill:none;stroke-dasharray:5 4}
-.dg .dot{stroke:#9AA8B5;stroke-dasharray:2 3}
-.regla{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.regla div{background:var(--paper);border-radius:8px;padding:14px 16px}
-.regla h4{margin:0 0 6px;font:600 16px "IBM Plex Serif",Georgia,serif;color:var(--ink)}
-.regla ul{margin:0;padding-left:18px;font-size:14.5px}
-.regla b{color:var(--ink)}
-.reach{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.reach span{font-size:14px;padding:5px 12px;border-radius:20px;background:var(--ink);color:#fff}
-@media (max-width:760px){.regla{grid-template-columns:1fr}.dg{padding:18px 16px}}
-.count{color:var(--muted);font-size:14.5px;margin:0 0 10px}
-.career{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px}
-.career li{padding:14px 0;border-bottom:1px solid var(--rule)}
-.career .y{font-size:14px;color:var(--muted)}
-.career .c{font-weight:600;color:var(--ink)}
-.career .r{font-size:15px}
-.numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
-.numbers div{border-top:2px solid var(--ink);padding-top:10px}
-.numbers b{display:block;font:600 30px "IBM Plex Serif",serif;color:var(--ink)}
-.numbers span{font-size:15px;color:var(--muted)}
-.contact{background:var(--ink);color:var(--panel-text);margin-top:80px;padding:56px 0}
-.contact h2{color:#fff;font-size:32px}
-.contact .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;margin-top:22px}
-.contact a{color:#fff}
-.contact ul{list-style:none;margin:0;padding:0}
-.contact li{padding:6px 0}
-.downloads a{display:inline-block;padding:6px 0}
-footer{padding:20px 0;font-size:13.5px;color:var(--muted)}
-@media (max-width:960px){
-  .stream{grid-template-columns:repeat(4,1fr);row-gap:18px}
-  .rail,.probe{display:none}
-  .steps{grid-template-columns:1fr 1fr;row-gap:20px}
-  .career{grid-template-columns:1fr 1fr}
-  .numbers{grid-template-columns:1fr 1fr}
-  .work li{grid-template-columns:1fr;gap:4px}
-  .work .tag{text-align:left}
-}
-@media (max-width:640px){
-  .nav ul{display:none}
-  .stream{grid-template-columns:1fr 1fr}
-  .steps,.heritage,.career,.contact .grid{grid-template-columns:1fr}
-  .stage .sys{height:auto}
-}
-</style>
+  <style>
+    :root {
+      --bg: #070d18;
+      --bg-surface: #0e1726;
+      --bg-card: #131f33;
+      --bg-card-hover: #182842;
+      --primary: #38bdf8;
+      --primary-hover: #0284c7;
+      --accent: #2dd4bf;
+      --accent-purple: #a855f7;
+      --accent-amber: #f59e0b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(56, 189, 248, 0.3);
+      --glow: rgba(56, 189, 248, 0.15);
+      --card-radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 15px;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #ffffff;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    p {
+      color: var(--text-muted);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #7dd3fc;
+    }
+
+    /* Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .badge-teal {
+      background: rgba(45, 212, 191, 0.1);
+      color: var(--accent);
+      border-color: rgba(45, 212, 191, 0.25);
+    }
+
+    .badge-purple {
+      background: rgba(168, 85, 247, 0.1);
+      color: var(--accent-purple);
+      border-color: rgba(168, 85, 247, 0.25);
+    }
+
+    .badge-amber {
+      background: rgba(245, 158, 11, 0.1);
+      color: var(--accent-amber);
+      border-color: rgba(245, 158, 11, 0.25);
+    }
+
+    /* Header & Navigation */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 13, 24, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      color: var(--primary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    nav.nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav.nav-links a {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav.nav-links a:hover, nav.nav-links a.active {
+      color: #ffffff;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      box-shadow: 0 6px 20px rgba(56, 189, 248, 0.45);
+      transform: translateY(-1px);
+      color: #ffffff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid var(--border-accent);
+    }
+
+    .btn-outline:hover {
+      background: rgba(56, 189, 248, 0.1);
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    section.hero {
+      padding: 80px 0 60px 0;
+      position: relative;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, rgba(14, 23, 38, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .hero-title {
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin: 16px 0 12px 0;
+      line-height: 1.15;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 16.5px;
+      line-height: 1.7;
+      color: #cbd5e1;
+      margin-bottom: 24px;
+    }
+
+    .contact-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+
+    .contact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      color: #e2e8f0;
+    }
+
+    .contact-pill svg {
+      width: 16px;
+      height: 16px;
+      color: var(--primary);
+    }
+
+    /* Metrics Strip */
+    .metrics-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      background: linear-gradient(135deg, #0e1726 0%, #152238 100%);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .metric-card {
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .metric-card:last-child {
+      border-right: none;
+    }
+
+    .metric-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #38bdf8;
+      line-height: 1.1;
+    }
+
+    .metric-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-top: 4px;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 70px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .section-heading {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .section-sub {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      max-width: 750px;
+    }
+
+    /* Target Operating Model (TOM) Interactive Diagram */
+    .tom-diagram {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 30px;
+    }
+
+    .tom-pipeline {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      position: relative;
+    }
+
+    .tom-step {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 14px;
+      text-align: center;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+
+    .tom-step:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+
+    .tom-step-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .tom-step-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .tom-step-desc {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .tom-oversight-bar {
+      margin-top: 20px;
+      background: linear-gradient(90deg, rgba(2, 132, 199, 0.15) 0%, rgba(45, 212, 191, 0.15) 100%);
+      border: 1px dashed var(--border-accent);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .tom-oversight-text {
+      font-size: 13px;
+      color: #e2e8f0;
+    }
+
+    .tom-oversight-text strong {
+      color: #38bdf8;
+    }
+
+    /* Areas of Specialism */
+    .specialism-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .specialism-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 24px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .specialism-card:hover {
+      border-color: var(--border-accent);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transform: translateY(-3px);
+    }
+
+    .specialism-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .specialism-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .specialism-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+
+    .specialism-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tech-tag {
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Projects Filter & Search */
+    .catalog-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 7px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--primary);
+      color: #070d18;
+      border-color: var(--primary);
+    }
+
+    .search-box {
+      position: relative;
+      min-width: 280px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: #ffffff;
+      padding: 9px 14px 9px 36px;
+      border-radius: 8px;
+      font-size: 13.5px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      color: var(--text-muted);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--card-radius);
+      padding: 24px;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-accent);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .project-client {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .project-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .project-summary {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 14px;
+      flex-grow: 1;
+    }
+
+    .project-details-block {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+      font-size: 12.5px;
+    }
+
+    .project-details-block p {
+      margin-bottom: 6px;
+      color: #cbd5e1;
+    }
+
+    .project-details-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-details-block strong {
+      color: #ffffff;
+    }
+
+    .project-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      margin-top: auto;
+    }
+
+    /* Career Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--primary) 0%, rgba(56, 189, 248, 0.1) 100%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 36px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -32px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 3px solid var(--primary);
+    }
+
+    .timeline-content {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .timeline-role {
+      font-size: 17px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .timeline-company {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .timeline-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 12px;
+    }
+
+    .timeline-bullets li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 13.5px;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+
+    .timeline-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 4px;
+      color: var(--primary);
+      font-size: 16px;
+      top: -2px;
+    }
+
+    /* Limit Management Deep Dive Banner */
+    .limit-banner {
+      background: linear-gradient(135deg, #0e1726 0%, #172554 100%);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 40px;
+    }
+
+    .limit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .limit-level {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .limit-level-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .limit-level-desc {
+      font-size: 12px;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* Downloads & Footer */
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .download-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .download-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      background: var(--bg-card);
+    }
+
+    .download-icon {
+      width: 36px;
+      height: 36px;
+      color: var(--primary);
+    }
+
+    .download-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .download-sub {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    footer.site-footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .specialism-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .metrics-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .tom-pipeline {
+        grid-template-columns: 1fr;
+      }
+      .limit-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .downloads-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 34px;
+      }
+      nav.nav-links {
+        display: none;
+      }
+      .specialism-grid {
+        grid-template-columns: 1fr;
+      }
+      .metrics-strip {
+        grid-template-columns: 1fr;
+      }
+      .limit-grid {
+        grid-template-columns: 1fr;
+      }
+      .downloads-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<nav class="nav" aria-label="Main">
-  <div class="wrap">
-    <a class="brand" href="#top">Maxious Manohar Benedict</a>
-    <ul>
-      <li><a href="#approach">Approach</a></li>
-      <li><a href="#practice">In practice</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#career">Career</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a class="cv" href="Maxious_Manohar_Benedict_Resume_2026.html">Resume</a>
-  </div>
-</nav>
-
-<main id="top">
-<div class="wrap">
-
-  <header class="hero">
-    <h1>AI transformation your organisation can still oversee.</h1>
-    <p class="sub">AI is usually sold as automation and speed. I redesign how banks and large regulated enterprises process information so that, once AI is doing the work, owners can still track every step, every SLA and every approval.</p>
-    <p class="who"><strong>Enterprise AI Transformation Leader.</strong> 29 years across Standard Chartered, OCBC, NTT and Stardomes, from custody hubs and Basel II batch to private AI cloud.</p>
-    <div class="actions">
-      <a class="btn primary" href="#approach">See the approach</a>
-      <a class="btn ghost" href="mailto:manohar.benedict@gmail.com">Email me</a>
-    </div>
-
-    <div class="board" aria-labelledby="board-title">
-      <div class="board-head">
-        <div>
-          <h2 id="board-title">One value stream, before and after AI</h2>
-          <p>A simplified banking value stream across systems A, B and C. Switch views to see what changes when AI takes on the processing, and what stays put.</p>
-        </div>
-        <div class="toggle" role="group" aria-label="View">
-          <button type="button" data-view="today" aria-pressed="true">Today</button>
-          <button type="button" data-view="ai" aria-pressed="false">After AI</button>
-        </div>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <div class="brand-logo">
+        <span class="brand-name">MAXIOUS MANOHAR BENEDICT</span>
+        <span class="brand-sub">Enterprise AI & Platform Transformation</span>
       </div>
-      <div class="stream" id="stream"><div class="rail" aria-hidden="true"></div></div>
-      <div class="legend" aria-hidden="true">
-        <span><i class="k-probe"></i>Oversight probe: volumes, status, exceptions, SLA clock</span>
-        <span><i class="k-ai"></i>AI-executed step</span>
-        <span><i class="k-hitl"></i>Human-in-the-loop check</span>
+      <nav class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#tom">TOM Blueprint</a>
+        <a href="#specialisms">Specialisms</a>
+        <a href="#projects">Project Catalog</a>
+        <a href="#experience">Experience</a>
+        <a href="#limit-management">Limit Management</a>
+        <a href="#downloads">Downloads</a>
+      </nav>
+      <div>
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
       </div>
-      <p class="board-note" id="board-note" aria-live="polite"></p>
     </div>
   </header>
 
-  <section id="approach">
-    <div class="sec-head">
-      <h2>The approach</h2>
-      <p>Five steps, in order. Most programmes start at step three. Starting at step one is what keeps the organisation in control afterwards.</p>
-    </div>
-    <ol class="steps">
-      <li><h3>Assess oversight readiness</h3><p>Baseline how each function is delivered across systems A, B and C, how they hand off, and what is measured today, before any AI.</p></li>
-      <li><h3>Map the value stream</h3><p>Trace data, validations, approvals and execution from front office to general ledger and regulatory reporting. Redraw it as a target operating model.</p></li>
-      <li><h3>Wrap legacy building blocks</h3><p>Add AI extraction, validation and reconciliation to existing blocks, each with explicit exit criteria.</p></li>
-      <li><h3>Place oversight checkpoints</h3><p>Probes, guardrails and human-in-the-loop sanity checks keep tracking, SLA and control evidence continuous.</p></li>
-      <li><h3>Govern locally</h3><p>Authority, approval and SOP compliance stay with accountable local owners.</p></li>
-    </ol>
-    <div class="pipes" aria-label="Pipeline types covered">
-      <b>One oversight view across:</b>
-      <span class="ai">AI-automated</span><span>Human-in-the-loop</span><span>Batch</span><span>Straight-through</span><span>Manual data entry</span><span>Customer mobile and web</span>
-    </div>
-  </section>
+  <!-- Hero Section -->
+  <section class="hero" id="overview">
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="badge badge-teal">Dubai, UAE &bull; Singapore Permanent Resident &bull; Global Availability</div>
+      <h1 class="hero-title">
+        Architecting <span>Enterprise AI Value Streams</span> & Target Operating Models
+      </h1>
+      <div class="hero-subtitle">Chief Technology Officer &bull; Enterprise AI Transformation Leader &bull; Platform Architect</div>
+      <p class="hero-desc">
+        28+ years bridging CxO strategic vision with mission-critical platform execution. Transforming massive, heterogeneous estates (legacy ERPs, core ledgers, middle-office reconciliations, and batch scheduling) by wrapping legacy lego blocks with deterministic AI agents, cognitive validation pipelines, and real-time operational oversight.
+      </p>
 
-  <section id="heritage">
-    <div class="sec-head">
-      <h2>Where the method comes from</h2>
-      <p>Moving processing to a remote hub while keeping authority local is not new. Banks have done it for decades. AI is the next hub.</p>
-    </div>
-    <div class="heritage">
-      <div><h3>Hub-and-spoke at Standard Chartered</h3><p>Centrally hubbed, multi-tenant custody platform (Project Cocteau) and the Multi-Business Platform team: processing moved to a hub while local entities kept sign-off and SOPs.</p></div>
-      <div><h3>Batch and SLA discipline</h3><p>1,000+ daily end-of-day jobs on Control-M at Standard Chartered, and Basel II scheduling at OCBC built around regulatory deadlines.</p></div>
-      <div><h3>Regulatory delivery at scale</h3><p>Antasena reporting for 10+ Indonesian banks, two recognised as the country's best implementers. In regulatory reporting, oversight is the deliverable.</p></div>
-      <div><h3>Private AI cloud today</h3><p>Stardomes AI Cloud Infrastructure: private, high-performance and secure, with maker-checker, audit trails and out-of-band identity built in.</p></div>
-    </div>
-    <div class="numbers">
-      <div><b>USD 30M+</b><span>services business grown from USD 0.5M</span></div>
-      <div><b>500+</b><span>people across 5 business units</span></div>
-      <div><b>200+</b><span>projects a year, under 5% variance</span></div>
-      <div><b>29 years</b><span>in enterprise technology</span></div>
-    </div>
-  </section>
+      <div class="contact-pills">
+        <div class="contact-pill">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <a href="mailto:manohar.benedict@gmail.com">manohar.benedict@gmail.com</a>
+        </div>
+        <div class="contact-pill">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>+971 527 752 927 &bull; +65 8925 4729</span>
+        </div>
+        <div class="contact-pill">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <a href="https://www.linkedin.com/in/maxious-manohar-benedict/" target="_blank">linkedin.com/in/maxious-manohar-benedict</a>
+        </div>
+      </div>
 
-
-  <section id="practice">
-    <div class="sec-head">
-      <h2>The method in practice</h2>
-      <p>Redrawn from earlier delivery work, with client names removed. Each pattern is a place where processing moved, and oversight had to move with it.</p>
-    </div>
-    <div class="dg-grid">
-<figure class="dg" id="dg-hub"><h3>Hub-and-spoke: processing moves, authority stays</h3><div class="dg-scroll"><svg viewBox="0 0 960 430" role="img" aria-label="Hub-and-spoke operating model: country entities send processing to a central hub while keeping local sign-off; a shared customer and limit master publishes to core banking, payments, trade, Basel II and MIS systems." xmlns="http://www.w3.org/2000/svg"><defs><marker id="mA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker><marker id="mAa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="aha"/></marker></defs><rect class="hub" x="215" y="165" width="170" height="90" rx="10"/><text class="tw b" x="300" y="198" text-anchor="middle">Processing hub</text><text class="tws" x="300" y="218" text-anchor="middle">Custody processing,</text><text class="tws" x="300" y="235" text-anchor="middle">scan, print and workflow</text><rect class="bx" x="10" y="30" width="150" height="56" rx="8"/><text class="t b" x="85" y="54" text-anchor="middle">Country entity</text><text class="ts" x="85" y="73" text-anchor="middle">Local sign-off and SOPs</text><circle class="ok" cx="160" cy="30" r="10"/><path class="okm" d="M155,30 l4,4 l7,-8"/><line class="ar ai" x1="120" y1="86" x2="255" y2="165" marker-end="url(#mA)"/><rect class="bx" x="440" y="30" width="150" height="56" rx="8"/><text class="t b" x="515" y="54" text-anchor="middle">Country entity</text><text class="ts" x="515" y="73" text-anchor="middle">Local sign-off and SOPs</text><circle class="ok" cx="590" cy="30" r="10"/><path class="okm" d="M585,30 l4,4 l7,-8"/><line class="ar ai" x1="480" y1="86" x2="345" y2="165" marker-end="url(#mA)"/><rect class="bx" x="10" y="182" width="150" height="56" rx="8"/><text class="t b" x="85" y="206" text-anchor="middle">Country entity</text><text class="ts" x="85" y="225" text-anchor="middle">Local sign-off and SOPs</text><circle class="ok" cx="160" cy="182" r="10"/><path class="okm" d="M155,182 l4,4 l7,-8"/><line class="ar ai" x1="160" y1="210" x2="215" y2="210" marker-end="url(#mA)"/><rect class="bx" x="440" y="182" width="150" height="56" rx="8"/><text class="t b" x="515" y="206" text-anchor="middle">Country entity</text><text class="ts" x="515" y="225" text-anchor="middle">Local sign-off and SOPs</text><circle class="ok" cx="590" cy="182" r="10"/><path class="okm" d="M585,182 l4,4 l7,-8"/><line class="ar ai" x1="440" y1="210" x2="385" y2="210" marker-end="url(#mA)"/><rect class="bx" x="10" y="334" width="150" height="56" rx="8"/><text class="t b" x="85" y="358" text-anchor="middle">Country entity</text><text class="ts" x="85" y="377" text-anchor="middle">Local sign-off and SOPs</text><circle class="ok" cx="160" cy="334" r="10"/><path class="okm" d="M155,334 l4,4 l7,-8"/><line class="ar ai" x1="120" y1="334" x2="255" y2="255" marker-end="url(#mA)"/><rect class="bx" x="440" y="334" width="150" height="56" rx="8"/><text class="t b" x="515" y="358" text-anchor="middle">Country entity</text><text class="ts" x="515" y="377" text-anchor="middle">Local sign-off and SOPs</text><circle class="ok" cx="590" cy="334" r="10"/><path class="okm" d="M585,334 l4,4 l7,-8"/><line class="ar ai" x1="480" y1="334" x2="345" y2="255" marker-end="url(#mA)"/><line class="sep" x1="607" y1="20" x2="607" y2="400"/><text class="t b" x="787" y="40" text-anchor="middle">Shared reference data</text><rect class="hub" x="697" y="62" width="180" height="50" rx="8"/><text class="tws" x="787" y="84" text-anchor="middle">Customer and limit master</text><text class="tws" x="787" y="101" text-anchor="middle">(SCI)</text><rect class="mw" x="625" y="160" width="325" height="34" rx="17"/><text class="ts" x="787" y="182" text-anchor="middle">Messaging middleware (publish / subscribe)</text><line class="ar" x1="787" y1="112" x2="787" y2="160" marker-end="url(#mA)"/><rect class="bx" x="625.0" y="250" width="60" height="52" rx="8"/><text class="ts2" x="655.0" y="272" text-anchor="middle">Core</text><text class="ts2" x="655.0" y="290" text-anchor="middle">banking</text><line class="ar2" x1="655.0" y1="194" x2="655.0" y2="250" marker-start="url(#mA)" marker-end="url(#mA)"/><rect class="bx" x="691.25" y="250" width="60" height="52" rx="8"/><text class="ts2" x="721.25" y="272" text-anchor="middle">Cash</text><text class="ts2" x="721.25" y="290" text-anchor="middle">payments</text><line class="ar2" x1="721.25" y1="194" x2="721.25" y2="250" marker-start="url(#mA)" marker-end="url(#mA)"/><rect class="bx" x="757.5" y="250" width="60" height="52" rx="8"/><text class="ts2" x="787.5" y="281" text-anchor="middle">Trade</text><line class="ar2" x1="787.5" y1="194" x2="787.5" y2="250" marker-start="url(#mA)" marker-end="url(#mA)"/><rect class="bx" x="823.75" y="250" width="60" height="52" rx="8"/><text class="ts2" x="853.75" y="281" text-anchor="middle">Basel II</text><line class="ar2" x1="853.75" y1="194" x2="853.75" y2="250" marker-start="url(#mA)" marker-end="url(#mA)"/><rect class="bx" x="890.0" y="250" width="60" height="52" rx="8"/><text class="ts2" x="920.0" y="272" text-anchor="middle">MIS</text><text class="ts2" x="920.0" y="290" text-anchor="middle">warehouse</text><line class="ar2" x1="920.0" y1="194" x2="920.0" y2="250" marker-start="url(#mA)" marker-end="url(#mA)"/><line class="ar ai" x1="660" y1="384" x2="700" y2="384" marker-end="url(#mA)"/><text class="ts" x="708" y="388" text-anchor="start">Processing moves to the hub</text><circle class="ok" cx="678" cy="410" r="8"/><path class="okm" d="M674,410 l3,3 l6,-6"/><text class="ts" x="708" y="414" text-anchor="start">Approval stays local</text></svg></div><figcaption>At Standard Chartered, custody and workflow processing moved to a central hub while each country entity kept sign-off, SOPs and its regulator relationship. A shared customer and limit master published to every product system. AI is the next hub.</figcaption><button type="button" class="rel" data-k="tom">Show operating model projects</button></figure>
-<figure class="dg" id="dg-r2r"><h3>Record to report through an accounting hub</h3><div class="dg-scroll"><svg viewBox="0 0 960 375" role="img" aria-label="Record-to-report flow: source systems feed a staging and mapping layer, an accounting hub creates journals, the general ledger holds summary journals, and reporting follows; four oversight probes check interface completeness, mapping exceptions, balanced journals and nominal versus GL balance, with drill-down from GL to transaction." xmlns="http://www.w3.org/2000/svg"><defs><marker id="mB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker><marker id="mBa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="aha"/></marker></defs><text class="t b" x="90" y="36" text-anchor="middle">Source systems</text><text class="t b" x="285" y="36" text-anchor="middle">Staging and mapping</text><text class="t b" x="480" y="36" text-anchor="middle">Accounting hub</text><text class="t b" x="675" y="36" text-anchor="middle">General ledger</text><text class="t b" x="870" y="36" text-anchor="middle">Reporting</text><rect class="bx" x="10" y="50" width="160" height="42" rx="8"/><text class="ts2" x="90" y="76" text-anchor="middle">Core banking A</text><line class="ar" x1="170" y1="71" x2="205" y2="153" marker-end="url(#mB)"/><rect class="bx" x="10" y="104" width="160" height="42" rx="8"/><text class="ts2" x="90" y="130" text-anchor="middle">Core banking B</text><line class="ar" x1="170" y1="125" x2="205" y2="153" marker-end="url(#mB)"/><rect class="bx" x="10" y="158" width="160" height="42" rx="8"/><text class="ts2" x="90" y="184" text-anchor="middle">Treasury and payments</text><line class="ar" x1="170" y1="179" x2="205" y2="153" marker-end="url(#mB)"/><rect class="bx" x="10" y="212" width="160" height="42" rx="8"/><text class="ts2" x="90" y="238" text-anchor="middle">200+ branches</text><line class="ar" x1="170" y1="233" x2="205" y2="153" marker-end="url(#mB)"/><rect class="bx" x="205" y="50" width="160" height="207" rx="8"/><text class="t b" x="285" y="130" text-anchor="middle">Staging layer</text><text class="ts" x="285" y="152" text-anchor="middle">Source-to-COA mapping</text><text class="ts" x="285" y="170" text-anchor="middle">Multi-currency and</text><text class="ts" x="285" y="187" text-anchor="middle">inter-branch handling</text><rect class="hub" x="400" y="50" width="160" height="207" rx="8"/><text class="tw b" x="480" y="122" text-anchor="middle">Accounting hub</text><text class="tws" x="480" y="146" text-anchor="middle">Journals for transactions</text><text class="tws" x="480" y="163" text-anchor="middle">the core cannot post</text><text class="tws" x="480" y="187" text-anchor="middle">Keeps transaction detail</text><rect class="bx" x="595" y="50" width="160" height="207" rx="8"/><text class="t b" x="675" y="130" text-anchor="middle">Summary journals</text><text class="ts" x="675" y="152" text-anchor="middle">Central chart of accounts</text><text class="ts" x="675" y="170" text-anchor="middle">Multi-entity,</text><text class="ts" x="675" y="187" text-anchor="middle">multi-GAAP</text><rect class="bx" x="790" y="50" width="160" height="207" rx="8"/><text class="ts2" x="870" y="122" text-anchor="middle">Regulatory reports</text><text class="ts2" x="870" y="147" text-anchor="middle">Subsidiary consolidation</text><text class="ts2" x="870" y="172" text-anchor="middle">Daily GL activity report</text><line class="ar" x1="365" y1="153" x2="400" y2="153" marker-end="url(#mB)"/><line class="ar" x1="560" y1="153" x2="595" y2="153" marker-end="url(#mB)"/><line class="ar" x1="755" y1="153" x2="790" y2="153" marker-end="url(#mB)"/><rect class="pr" x="181" y="146" width="14" height="14" transform="rotate(45 188 153)"/><text class="tn" x="188" y="139" text-anchor="middle">1</text><rect class="pr" x="375" y="146" width="14" height="14" transform="rotate(45 382 153)"/><text class="tn" x="382" y="139" text-anchor="middle">2</text><rect class="pr" x="570" y="146" width="14" height="14" transform="rotate(45 577 153)"/><text class="tn" x="577" y="139" text-anchor="middle">3</text><rect class="pr" x="765" y="146" width="14" height="14" transform="rotate(45 772 153)"/><text class="tn" x="772" y="139" text-anchor="middle">4</text><path class="dd" d="M675,257 Q577,312 480,257" marker-end="url(#mBa)"/><text class="ts" x="577" y="312" text-anchor="middle">Drill down from GL to transaction level to clear breaks</text><rect class="pr" x="20" y="345" width="14" height="14" transform="rotate(45 27 352)"/><text class="ts" x="44" y="357" text-anchor="start">1  Interface completeness</text><rect class="pr" x="260" y="345" width="14" height="14" transform="rotate(45 267 352)"/><text class="ts" x="284" y="357" text-anchor="start">2  Mapping exceptions</text><rect class="pr" x="500" y="345" width="14" height="14" transform="rotate(45 507 352)"/><text class="ts" x="524" y="357" text-anchor="start">3  Balanced journals</text><rect class="pr" x="740" y="345" width="14" height="14" transform="rotate(45 747 352)"/><text class="ts" x="764" y="357" text-anchor="start">4  Nominal vs GL balance</text></svg></div><figcaption>Where core systems could not post every journal, an accounting hub created them and kept transaction detail. Four checkpoints, plus drill-down from GL to transaction, made ledger breaks traceable instead of manual.</figcaption><button type="button" class="rel" data-k="r2r">Show ledger and reconciliation projects</button></figure>
-<figure class="dg" id="dg-recon"><h3>Reconciliation with a human exception queue</h3><div class="dg-scroll"><svg viewBox="0 0 960 370" role="img" aria-label="Automated reconciliation: five sources are ingested, a multi-way matching engine auto-closes matches and routes breaks to a human investigation queue tracked for ageing and SLA, then resolved and signed off." xmlns="http://www.w3.org/2000/svg"><defs><marker id="mC" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker><marker id="mCa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="aha"/></marker></defs><text class="t b" x="90" y="28" text-anchor="middle">Sources</text><rect class="bx" x="10" y="40" width="160" height="40" rx="8"/><text class="ts2" x="90" y="65" text-anchor="middle">ATM switch</text><line class="ar" x1="170" y1="60" x2="230" y2="160" marker-end="url(#mC)"/><rect class="bx" x="10" y="90" width="160" height="40" rx="8"/><text class="ts2" x="90" y="115" text-anchor="middle">Cash deposit machines</text><line class="ar" x1="170" y1="110" x2="230" y2="160" marker-end="url(#mC)"/><rect class="bx" x="10" y="140" width="160" height="40" rx="8"/><text class="ts2" x="90" y="165" text-anchor="middle">Card schemes</text><line class="ar" x1="170" y1="160" x2="230" y2="160" marker-end="url(#mC)"/><rect class="bx" x="10" y="190" width="160" height="40" rx="8"/><text class="ts2" x="90" y="215" text-anchor="middle">Utility payments</text><line class="ar" x1="170" y1="210" x2="230" y2="160" marker-end="url(#mC)"/><rect class="bx" x="10" y="240" width="160" height="40" rx="8"/><text class="ts2" x="90" y="265" text-anchor="middle">Cash book and GL</text><line class="ar" x1="170" y1="260" x2="230" y2="160" marker-end="url(#mC)"/><rect class="bx" x="230" y="120" width="150" height="80" rx="8"/><text class="t b" x="305" y="155" text-anchor="middle">Automated</text><text class="t b" x="305" y="175" text-anchor="middle">ingest</text><rect class="hub" x="430" y="110" width="170" height="100" rx="8"/><text class="tw b" x="515" y="152" text-anchor="middle">Multi-way</text><text class="tw b" x="515" y="172" text-anchor="middle">matching engine</text><line class="ar" x1="380" y1="160" x2="430" y2="160" marker-end="url(#mC)"/><rect class="pr" x="398" y="153" width="14" height="14" transform="rotate(45 405 160)"/><text class="ts" x="405" y="98" text-anchor="middle">Counts in = counts out</text><rect class="aib" x="660" y="50" width="140" height="60" rx="8"/><text class="tw b" x="730" y="76" text-anchor="middle">Matched</text><text class="tws" x="730" y="96" text-anchor="middle">auto-closed</text><rect class="bx" x="660" y="210" width="140" height="60" rx="8"/><text class="t b" x="730" y="236" text-anchor="middle">Breaks</text><text class="ts" x="730" y="256" text-anchor="middle">routed with context</text><line class="ar" x1="600" y1="140" x2="660" y2="80" marker-end="url(#mC)"/><line class="ar" x1="600" y1="180" x2="660" y2="240" marker-end="url(#mC)"/><rect class="bx" x="830" y="210" width="125" height="60" rx="8"/><text class="t b" x="892" y="236" text-anchor="middle">Investigation</text><text class="t b" x="892" y="256" text-anchor="middle">queue</text><circle class="hl" cx="943" cy="258" r="7"/><line class="ar" x1="800" y1="240" x2="830" y2="240" marker-end="url(#mC)"/><rect class="pr" x="808" y="233" width="14" height="14" transform="rotate(45 815 240)"/><text class="ts" x="815" y="198" text-anchor="middle">Ageing and SLA</text><rect class="bx" x="830" y="310" width="125" height="50" rx="8"/><text class="ts2" x="892" y="331" text-anchor="middle">Resolved and</text><text class="ts2" x="892" y="348" text-anchor="middle">signed off</text><line class="ar" x1="892" y1="270" x2="892" y2="310" marker-end="url(#mC)"/><rect class="pill" x="10" y="318" width="280" height="34" rx="17"/><text class="ts2" x="150" y="340" text-anchor="middle">Daily run complete before 8 AM</text><rect class="pill" x="305" y="318" width="500" height="34" rx="17"/><text class="ts2" x="555" y="340" text-anchor="middle">Confirmations matched every 15 minutes, before release</text></svg></div><figcaption>Automated matching closes the routine volume; people only see genuine breaks, with context and an ageing clock. This is the human-in-the-loop pattern the approach applies to AI steps.</figcaption><button type="button" class="rel" data-k="r2r">Show reconciliation projects</button></figure>
-<figure class="dg" id="dg-batch"><h3>Batch as an oversight layer</h3><div class="dg-scroll"><svg viewBox="0 0 960 315" role="img" aria-label="Batch as an oversight layer: an enterprise scheduler orchestrates extract, load, calculate, reconcile and publish stages, with probes between stages; supported by generated job definitions, dependency QA, runtime alerts and owner self-service monitoring." xmlns="http://www.w3.org/2000/svg"><defs><marker id="mD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker><marker id="mDa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="aha"/></marker></defs><rect class="hub" x="20" y="20" width="920" height="46" rx="10"/><text class="tw b" x="480" y="49" text-anchor="middle">Enterprise scheduler (Control-M): dependencies, windows, thresholds</text><rect class="bx" x="20" y="110" width="168" height="60" rx="8"/><text class="ts2" x="104" y="145" text-anchor="middle">Extract from source cores</text><line class="dot" x1="104" y1="66" x2="104" y2="110"/><line class="ar" x1="188" y1="140" x2="208" y2="140" marker-end="url(#mD)"/><rect class="pr" x="191" y="133" width="14" height="14" transform="rotate(45 198 140)"/><rect class="bx" x="208" y="110" width="168" height="60" rx="8"/><text class="ts2" x="292" y="145" text-anchor="middle">Load warehouse</text><line class="dot" x1="292" y1="66" x2="292" y2="110"/><line class="ar" x1="376" y1="140" x2="396" y2="140" marker-end="url(#mD)"/><rect class="pr" x="379" y="133" width="14" height="14" transform="rotate(45 386 140)"/><rect class="bx" x="396" y="110" width="168" height="60" rx="8"/><text class="ts2" x="480" y="145" text-anchor="middle">Calculate (RWA, ECL, GL)</text><line class="dot" x1="480" y1="66" x2="480" y2="110"/><line class="ar" x1="564" y1="140" x2="584" y2="140" marker-end="url(#mD)"/><rect class="pr" x="567" y="133" width="14" height="14" transform="rotate(45 574 140)"/><rect class="bx" x="584" y="110" width="168" height="60" rx="8"/><text class="ts2" x="668" y="145" text-anchor="middle">Reconcile</text><line class="dot" x1="668" y1="66" x2="668" y2="110"/><line class="ar" x1="752" y1="140" x2="772" y2="140" marker-end="url(#mD)"/><rect class="pr" x="755" y="133" width="14" height="14" transform="rotate(45 762 140)"/><rect class="bx" x="772" y="110" width="168" height="60" rx="8"/><text class="ts2" x="856" y="145" text-anchor="middle">Publish reports</text><line class="dot" x1="856" y1="66" x2="856" y2="110"/><rect class="tint" x="20" y="205" width="215" height="95" rx="8"/><text class="tb2" x="38" y="238" text-anchor="start">5,000+</text><text class="ts" x="38" y="262" text-anchor="start">job definitions generated</text><text class="ts" x="38" y="280" text-anchor="start">by script</text><rect class="tint" x="255" y="205" width="215" height="95" rx="8"/><text class="tb2" x="273" y="238" text-anchor="start">QA scripts</text><text class="ts" x="273" y="262" text-anchor="start">check dependencies against</text><text class="ts" x="273" y="280" text-anchor="start">the documented design</text><rect class="tint" x="490" y="205" width="215" height="95" rx="8"/><text class="tb2" x="508" y="238" text-anchor="start">Alerts</text><text class="ts" x="508" y="262" text-anchor="start">when a job runs longer</text><text class="ts" x="508" y="280" text-anchor="start">than usual</text><rect class="tint" x="725" y="205" width="215" height="95" rx="8"/><text class="tb2" x="743" y="238" text-anchor="start">Self-service</text><text class="ts" x="743" y="262" text-anchor="start">monitoring for</text><text class="ts" x="743" y="280" text-anchor="start">application owners</text></svg></div><figcaption>The scheduler already knows every dependency, window and threshold, which makes it the natural place for probes. At a 1,500-branch bank, end-of-day processing fell from six hours to under two.</figcaption><button type="button" class="rel" data-k="batch">Show batch and operations projects</button></figure>
-<figure class="dg" id="dg-regla"><h3>Product view: the Regla suite at Emerio</h3>
-<div class="regla">
- <div><h4>Regulatory and compliance</h4><ul><li>Antasena and SLIK central bank reporting</li><li>Statistical and financial reports, daily to annual</li><li>Legal lending limit monitoring</li><li>Basel II RWA (SA) and market risk</li><li>Basel III LCR and NSFR</li><li>XBRL formatting</li></ul></div>
- <div><h4>IFRS</h4><ul><li><b>IAS 32/39</b> engine: 19 institutions</li><li><b>IFRS 9</b> calculation and reporting: 16 institutions</li><li>IFRS 7 disclosures</li><li>IFRS 16 valuation</li><li>Reporting GL</li></ul></div>
- <div><h4>Performance manager</h4><ul><li>Fund transfer pricing</li><li>Cost allocation</li><li>Profitability and performance reporting</li></ul></div>
-</div>
-<div class="reach"><span><b>20+</b> Indonesian banks</span><span>Malaysia</span><span>Singapore</span><span>Philippines</span><span>Brunei</span></div>
-<figcaption>Products built inside the services business on one regulatory and financial reporting data model, feeding regulatory, accounting and profitability outputs.</figcaption>
-<button type="button" class="rel" data-k="risk">Show regulatory projects</button></figure>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="sec-head">
-      <h2>Project portfolio</h2>
-      <p>31 engagements across banks, a central bank, insurers, AI platforms and public institutions. Client engagements are described by sector and region; employers are named.</p>
-    </div>
-    <div class="filters" role="group" aria-label="Filter by value stream" id="filters"></div>
-    <p class="count" id="count" aria-live="polite"></p>
-    <ul class="work" id="worklist"></ul>
-  </section>
-
-  <section id="career">
-    <div class="sec-head"><h2>Career</h2></div>
-    <ol class="career">
-      <li><div class="y">2025 – present</div><div class="c">Stardomes, Dubai</div><div class="r">Chief Technology Officer</div></li>
-      <li><div class="y">2024 – 2025</div><div class="c">Independent Advisory, Singapore</div><div class="r">Principal Consultant and Enterprise AI Advisor</div></li>
-      <li><div class="y">2023 – 2024</div><div class="c">MinIO, Singapore</div><div class="r">Executive, APAC Solutions and GTM</div></li>
-      <li><div class="y">2022 – 2023</div><div class="c">Lentra.ai, Singapore</div><div class="r">Regional Solution Leader, ASEAN</div></li>
-      <li><div class="y">2020 – 2022</div><div class="c">NTT Indonesia Technology, Jakarta</div><div class="r">Solutions Leader</div></li>
-      <li><div class="y">2007 – 2020</div><div class="c">Emerio / NTT Digital Business Solutions, Jakarta</div><div class="r">Director, Delivery, Products and Pre-Sales</div></li>
-      <li><div class="y">2005 – 2007</div><div class="c">OCBC Bank, Singapore</div><div class="r">Extraction and Scheduling Lead, Basel II</div></li>
-      <li><div class="y">1998 – 2005</div><div class="c">Standard Chartered, Singapore and Chennai</div><div class="r">Systems Analyst to Product Manager</div></li>
-      <li><div class="y">1997 – 1998</div><div class="c">Polaris Software Lab, Chennai</div><div class="r">Consultant</div></li>
-    </ol>
-  </section>
-
-</div>
-
-<section class="contact" id="contact">
-  <div class="wrap">
-    <h2>Let's talk</h2>
-    <div class="grid">
-      <ul>
-        <li>Email: <a href="mailto:manohar.benedict@gmail.com">manohar.benedict@gmail.com</a></li>
-        <li>Phone: <a href="tel:+971527752927">+971 527 752 927</a> or <a href="tel:+6589254729">+65 8925 4729</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/maxious-manohar-benedict/">maxious-manohar-benedict</a></li>
-        <li>Based in Dubai | Singapore Permanent Resident</li>
-      </ul>
-      <div class="downloads">
-        <div>Download the resume</div>
-        <a href="Maxious_Manohar_Benedict_Resume_2026.html">Printable resume (save as PDF)</a><br>
-        <a href="Maxious_Manohar_Benedict_ATS_Resume_2026.txt" download>ATS plain text</a><br>
-        <a href="Maxious_Manohar_Benedict_CV_2026.pptx" download>PowerPoint CV</a>
+      <!-- Metrics -->
+      <div class="metrics-strip">
+        <div class="metric-card">
+          <div class="metric-num">28+ Yrs</div>
+          <div class="metric-label">Enterprise Systems Leadership</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">M+ Built</div>
+          <div class="metric-label">60x P&L Commercial Scale</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">500+ Led</div>
+          <div class="metric-label">Architects & Engineers</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num">Tier-1 BFSI</div>
+          <div class="metric-label">Core &bull; Limit &bull; RegTech</div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-</main>
-<footer><div class="wrap">Maxious Manohar Benedict, 2026</div></footer>
+  </section>
 
-<script>
-const stages = [
-  {name:'Onboard', sys:'System A: channels', owner:'Branch', today:['Mobile and web',false], ai:['Mobile and web',false], hitl:false},
-  {name:'Capture', sys:'System A: channels', owner:'Ops hub', today:['Manual data entry',false], ai:['AI document extraction',true], hitl:false},
-  {name:'Validate', sys:'System B: core', owner:'Ops hub', today:['Human review',false], ai:['AI validation',true], hitl:true},
-  {name:'Approve', sys:'System B: core', owner:'Branch (local SOP)', today:['Maker-checker',false], ai:['Maker-checker',false], hitl:false},
-  {name:'Process', sys:'System B: core', owner:'Ops hub', today:['Straight-through',false], ai:['Straight-through',false], hitl:false},
-  {name:'Reconcile', sys:'System C: ledger', owner:'Finance', today:['Batch and manual matching',false], ai:['AI reconciliation',true], hitl:true},
-  {name:'Report', sys:'System C: ledger', owner:'Finance', today:['End-of-day batch',false], ai:['End-of-day batch',false], hitl:false},
-];
-const notes = {
-  today: 'Seven steps, three systems, six probes. This is the oversight baseline to measure before anything changes.',
-  ai: 'Three steps are now AI-executed, two with human sanity checks. The probes and owners have not moved, so the same SLA view continues.'
-};
-const stream = document.getElementById('stream');
-stages.forEach(s => {
-  const el = document.createElement('div');
-  el.className = 'stage';
-  el.innerHTML = `<div class="sys">${s.sys}</div>
-    <div class="box"><div class="name">${s.name}</div><div class="mode"></div>
-    <div class="hitl">Human check</div><div class="owner">Owner: ${s.owner}</div></div>
-    <span class="probe" title="Probe: volumes, status, exceptions, SLA clock"></span>`;
-  stream.appendChild(el);
-});
-function render(view){
-  [...stream.querySelectorAll('.stage')].forEach((el,i) => {
-    const s = stages[i], [label, isAI] = s[view];
-    const m = el.querySelector('.mode');
-    m.textContent = label; m.classList.toggle('ai', isAI);
-    el.querySelector('.hitl').classList.toggle('on', view === 'ai' && s.hitl);
-    el.querySelector('.box').classList.toggle('changed', view === 'ai' && s.today[0] !== s.ai[0]);
-  });
-  document.getElementById('board-note').textContent = notes[view];
-  document.querySelectorAll('.toggle button').forEach(b => b.setAttribute('aria-pressed', b.dataset.view === view));
-}
-document.querySelectorAll('.toggle button').forEach(b => b.addEventListener('click', () => render(b.dataset.view)));
-render('today');
+  <!-- Target Operating Model (TOM) Section -->
+  <section id="tom">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">The Core Architectural Philosophy</div>
+        <h2 class="section-heading">Enterprise AI Transformation: The Target Operating Model (TOM)</h2>
+        <p class="section-sub">
+          True enterprise transformation is not isolated AI widgets or hype-driven automation. It is the architectural discipline of redrawing the entire information value stream, wrapping legacy systems with cognitive validation, and placing real-time operational oversight across hybrid execution pipelines.
+        </p>
+      </div>
 
-const work = [
- {
-  "c": "Stardomes | Dubai",
-  "y": "2025 – present",
-  "f": "digital",
-  "t": "Identity Provider, out-of-band 2FA and digital banking",
-  "d": "Integrated platform bridging an Identity Provider with 2FA, reference banking apps (web and mobile) and satellite IoT firmware.",
-  "p": [
-   [
-    "Architecture and delivery",
-    "2FA binding state machines between banking backends and the IdP; out-of-band satellite MFA over BLE GATT profiles via a broadcast emulator; dual-authorisation maker-checker workflows for corporate operations."
-   ],
-   [
-    "Agentic engineering",
-    "10 specification-driven agent workstreams (5 backend, 5 frontend) executed by Claude Code; multi-agent QA orchestrated by LangGraph across Playwright, Appium and Postman/Newman."
-   ]
-  ],
-  "k": [
-   "React / TypeScript / Vite",
-   "Claude Code",
-   "LangGraph",
-   "BLE GATT",
-   "OAuth 2.0 / OIDC"
-  ]
- },
- {
-  "c": "Stardomes | Dubai",
-  "y": "2025 – present",
-  "f": "ai",
-  "t": "CWS (Connect Watch Secure) AI situational platform",
-  "d": "Multi-tier surveillance and situational command platform combining edge computer vision, central analytics and satellite telemetry backhaul.",
-  "p": [
-   [
-    "Mission scope",
-    "Operational workflows for border security, VIP route protection and event dispatch under zero-trust conditions."
-   ],
-   [
-    "Telemetry and probes",
-    "Edge probes and sensor telemetry across hybrid communications channels to keep operational oversight and human-in-the-loop validation."
-   ]
-  ],
-  "k": [
-   "Edge AI",
-   "Computer vision",
-   "Satcom telemetry",
-   "Command centre"
-  ]
- },
- {
-  "c": "Defence research organisation",
-  "y": "2025 – present",
-  "f": "ai",
-  "t": "Sovereign AI GPU cluster",
-  "d": "Technical scoping for an AI GPU cluster: two companion RFPs (facility, power and cooling; compute, storage, network and management) and custom GPU and NVMe server design.",
-  "p": [],
-  "k": [
-   "GPU cluster",
-   "NVMe storage",
-   "RFP design"
-  ]
- },
- {
-  "c": "Tier-1 ASEAN regional bank",
-  "y": "2024 – 2025",
-  "f": "ai",
-  "t": "Kubernetes GPU compute and NVIDIA NIM inference",
-  "d": "Kubernetes GPU compute running NVIDIA NIM microservices for document intelligence and local LLM inference, as part of a data and analytics modernisation.",
-  "p": [
-   [
-    "Operational oversight",
-    "Validation guardrails on regulatory document extraction and statutory filings, with exceptions routed for human review."
-   ],
-   [
-    "Stack",
-    "Kubernetes GPU pods, NVIDIA NIM, RAPIDS and DALI, on-premise inference."
-   ]
-  ],
-  "k": [
-   "Kubernetes",
-   "NVIDIA NIM",
-   "RAPIDS",
-   "Document AI"
-  ]
- },
- {
-  "c": "Banking data platform engagement",
-  "y": "2024 – 2025",
-  "f": "ai",
-  "t": "35-node, 1 PB on-premise lakehouse and natural-language-to-SQL",
-  "d": "On-premise lakehouse on MinIO S3 and Trino with open table and file formats (Iceberg, Parquet, ORC, Avro) across a 35-node, 1 PB hardware fabric.",
-  "p": [
-   [
-    "Natural language to SQL",
-    "Advised on a self-hosted LLM query engine for natural-language questions against core banking transaction data."
-   ],
-   [
-    "Governance",
-    "Query lineage probes and data parity checks against the core general ledger."
-   ]
-  ],
-  "k": [
-   "MinIO S3",
-   "Trino",
-   "Apache Iceberg",
-   "NL-to-SQL"
-  ]
- },
- {
-  "c": "Japanese banking group subsidiary, Philippines",
-  "y": "2024 – 2025",
-  "f": "onboarding",
-  "t": "Loan origination wrapped with AI and repair agents",
-  "d": "Redesigned retail and SME loan origination, wrapping legacy core banking with AI ICR/OCR, automated document collection and repair agents.",
-  "p": [
-   [
-    "Human-in-the-loop",
-    "Exception queues and verification gates with explicit exit criteria; credit underwriting turnaround cut by over 60%."
-   ]
-  ],
-  "k": [
-   "Agentic workflows",
-   "AI ICR/OCR",
-   "Loan origination",
-   "HITL queues"
-  ]
- },
- {
-  "c": "Indonesian financial conglomerate",
-  "y": "2024 – 2025",
-  "f": "risk",
-  "t": "Group-wide fraud-ring database and IFRS 17 model validation",
-  "d": "Transaction fraud surveillance and a synthetic-identity graph database to detect organised fraud rings across banking and insurance subsidiaries.",
-  "p": [
-   [
-    "Actuarial validation",
-    "Analytical models to cross-check the impact of the IFRS 4 to IFRS 17 transition."
-   ]
-  ],
-  "k": [
-   "Graph database",
-   "Fraud rings",
-   "IFRS 17",
-   "Fraud rules"
-  ]
- },
- {
-  "c": "UK conveyancing firm",
-  "y": "2024 – 2025",
-  "f": "onboarding",
-  "t": "Conveyancing workflow automation",
-  "d": "Document ingestion and examination engines integrated with HM Land Registry.",
-  "p": [],
-  "k": [
-   "Document AI",
-   "Workflow automation"
-  ]
- },
- {
-  "c": "Lentra.ai | Leading e-wallet, Philippines",
-  "y": "2022 – 2023",
-  "f": "onboarding",
-  "t": "80 million customer records deduplicated with biometrics",
-  "d": "Multidimensional deduplication of 80 million customer records for one of the largest e-wallets in the Philippines.",
-  "p": [
-   [
-    "Matching",
-    "Facial biometrics, phonetic name matching and alternate identity data to remove duplicate identities, preparing the base for automated micro-lending."
-   ]
-  ],
-  "k": [
-   "CIF deduplication",
-   "Facial biometrics",
-   "Digital lending"
-  ]
- },
- {
-  "c": "Lentra.ai | Digital lending, ASEAN",
-  "y": "2022 – 2023",
-  "f": "onboarding",
-  "t": "One SLA-governed lending pipeline",
-  "d": "Joined sales, verification, underwriting and operations into one pipeline, with scorecards, policy decision trees and e-KYC and e-signature checkpoints.",
-  "p": [],
-  "k": [
-   "Loan onboarding",
-   "e-KYC",
-   "Decisioning"
-  ]
- },
- {
-  "c": "Largest Indonesian private bank",
-  "y": "2018 – 2020",
-  "f": "risk",
-  "t": "IFRS 9 expected credit loss automation (Regla)",
-  "d": "IFRS 9 ECL calculation and automated accounting on Emerio’s Regla product.",
-  "p": [
-   [
-    "Scope",
-    "Automated business model and SPPI tests, forward-looking PD/LGD/EAD staging, and effective interest rate amortised-cost accounting across tens of millions of accounts."
-   ],
-   [
-    "Outcome",
-    "Industry-benchmark submission SLAs, meeting audit and central bank review."
-   ]
-  ],
-  "k": [
-   "Regla IFRS 9",
-   "PD / LGD / EAD",
-   "EIR amortisation"
-  ]
- },
- {
-  "c": "Malaysian insurer",
-  "y": "2017 – 2020",
-  "f": "ai",
-  "t": "Master data management and risk-based pricing after de-tariff",
-  "d": "Master data management with single golden records for customers, products and agents.",
-  "p": [
-   [
-    "Value",
-    "Household 360 views for cross-sell and up-sell, and risk-based pricing analytics after motor de-tariff deregulation."
-   ]
-  ],
-  "k": [
-   "MDM golden record",
-   "Household 360",
-   "Risk-based pricing"
-  ]
- },
- {
-  "c": "Indonesian retail bank",
-  "y": "2017 – 2019",
-  "f": "digital",
-  "t": "Active-active enterprise API gateway",
-  "d": "Enterprise API management with active-active DC-DR redundancy and 99.99% service availability.",
-  "p": [
-   [
-    "Impact",
-    "Standardised multi-protocol interfaces, cut fintech and merchant onboarding from months to days, and decoupled front-end apps from legacy cores. Piloted with 10 APIs; the catalogue has since grown past 200."
-   ]
-  ],
-  "k": [
-   "API gateway",
-   "Active-active DC-DR",
-   "Fintech H2H"
-  ]
- },
- {
-  "c": "10+ Indonesian banks",
-  "y": "2016 – 2020",
-  "f": "risk",
-  "t": "Antasena regulatory reporting suite (Regla)",
-  "d": "Emerio’s regulatory reporting product for the Bank Indonesia / OJK Antasena framework (LBU, LBBU, SLIK, LKPBU).",
-  "p": [
-   [
-    "Recognition",
-    "Two client implementations were recognised by the regulator as the country’s best implementers."
-   ]
-  ],
-  "k": [
-   "Antasena",
-   "SLIK / LBU / LBBU",
-   "FSI data model"
-  ]
- },
- {
-  "c": "Indonesian bank | Digital banking unit",
-  "y": "2016 – 2019",
-  "f": "ai",
-  "t": "Big data lake and real-time customer 360",
-  "d": "Big data platform and customer 360 data lake for a flagship digital bank, unifying transactional and external data sets.",
-  "p": [
-   [
-    "Business impact",
-    "Replaced siloed departmental data with real-time recommendations, next-best-action triggers and churn alerts."
-   ]
-  ],
-  "k": [
-   "Data lake",
-   "Customer 360",
-   "Next-best-action"
-  ]
- },
- {
-  "c": "Indonesian auto-finance company",
-  "y": "2016 – 2018",
-  "f": "onboarding",
-  "t": "Mobile loan origination for dealers and consumers",
-  "d": "Mobile applications for dealers and retail customers, integrated with backend credit decisioning.",
-  "p": [
-   [
-    "Features",
-    "Credit simulation, instalment plans, early settlement simulation and vehicle registration renewal."
-   ]
-  ],
-  "k": [
-   "Mobile lending",
-   "Dealer workflow",
-   "Credit simulation"
-  ]
- },
- {
-  "c": "State-owned Indonesian microfinance group",
-  "y": "2015 – 2018",
-  "f": "r2r",
-  "t": "Multi-entity GL consolidation on Oracle Financials",
-  "d": "Oracle Financials and FAH unifying accounting across 11 operating companies.",
-  "p": [
-   [
-    "Complexity",
-    "12 automated interfaces across 6 file formats, multi-currency processing, inter-branch balancing and net open position across thousands of micro-lending branches."
-   ],
-   [
-    "Outcomes",
-    "200+ branches integrated, removing manual uploads; more than 50% productivity gain on monthly regulatory reporting, including subsidiary consolidation."
-   ]
-  ],
-  "k": [
-   "Oracle Financials",
-   "Multi-entity COA",
-   "Multi-currency"
-  ]
- },
- {
-  "c": "Indonesian life insurer",
-  "y": "2015 – 2017",
-  "f": "digital",
-  "t": "Direct-to-consumer insurance portal and agent platform",
-  "d": "Online insurance sales portal and agent distribution platform with CMS and payment gateway integration.",
-  "p": [
-   [
-    "Architecture",
-    "Angular front end, policy quotation engine and underwriting integrations."
-   ]
-  ],
-  "k": [
-   "Angular",
-   "Payment gateways",
-   "E-commerce"
-  ]
- },
- {
-  "c": "Indonesian retail and microfinance bank",
-  "y": "2014 – 2017",
-  "f": "r2r",
-  "t": "Oracle General Ledger and Financial Accounting Hub",
-  "d": "Oracle GL and FAH across retail and microfinance operations to close core-to-ledger gaps.",
-  "p": [
-   [
-    "Solution",
-    "Central chart of accounts, automated sub-ledger journals for non-standard transactions, automated revaluation, and removal of nominal-to-GL reconciliation breaks."
-   ]
-  ],
-  "k": [
-   "Oracle FAH",
-   "Oracle GL",
-   "Reconciliation"
-  ]
- },
- {
-  "c": "Indonesian central bank",
-  "y": "2014 – 2016",
-  "f": "r2r",
-  "t": "High-value SWIFT confirmation matching",
-  "d": "Automated confirmation matching for third-party SWIFT messages in interbank clearing.",
-  "p": [
-   [
-    "Value",
-    "Replaced manual confirmation checks with automated ingestion, validation and settlement sign-off, reducing operational risk on high-value flows. Matching runs every 15 minutes."
-   ]
-  ],
-  "k": [
-   "SWIFT",
-   "High-value clearing",
-   "Automated matching"
-  ]
- },
- {
-  "c": "Indonesian deposit insurer",
-  "y": "2013 – 2017",
-  "f": "risk",
-  "t": "Core statutory solution for national deposit insurance",
-  "d": "Led solution development and delivery of the core system for the statutory deposit insurance corporation.",
-  "p": [
-   [
-    "Scope",
-    "Premium contribution calculations, deposit guarantee limits and risk-weighted assessment models across commercial and rural banks."
-   ]
-  ],
-  "k": [
-   "Deposit insurance",
-   "Statutory risk",
-   "National core"
-  ]
- },
- {
-  "c": "Indonesian life insurer (multinational group)",
-  "y": "2013 – 2016",
-  "f": "batch",
-  "t": "Control-M batch automation on iSeries",
-  "d": "Automated policy lifecycle batch runs, replacing manual operator night shifts with BMC Control-M scheduling.",
-  "p": [
-   [
-    "Impact",
-    "Multi-system dependency triggers across daily, weekly and monthly runs, with batch SLA tracking."
-   ],
-   [
-    "Oversight",
-    "Batch Impact Manager flags runs that take longer than usual, and application owners monitor their own batches through self-service."
-   ]
-  ],
-  "k": [
-   "BMC Control-M",
-   "iSeries AS/400",
-   "Batch SLA"
-  ]
- },
- {
-  "c": "Indonesian commercial bank",
-  "y": "2012 – 2016",
-  "f": "r2r",
-  "t": "Multi-channel transaction reconciliation",
-  "d": "Re-engineered intraday and end-of-day reconciliation across ATM, cash deposit machines, card schemes and utility payment channels.",
-  "p": [
-   [
-    "Outcome",
-    "Automated multi-way matching replaced manual spreadsheets, cutting reconciliation processing time by 80% and focusing investigation on genuine settlement breaks. The daily run completes before 8 AM."
-   ]
-  ],
-  "k": [
-   "Automated reconciliation",
-   "ATM / CDM / cards",
-   "Exception workflow"
-  ]
- },
- {
-  "c": "Large Indonesian regional bank",
-  "y": "2011 – 2015",
-  "f": "batch",
-  "t": "1,500-branch core banking migration from mainframe to Oracle",
-  "d": "Managed-services partner for stabilisation and staged migration of 1,500 branches from mainframe to an Oracle core banking architecture.",
-  "p": [
-   [
-    "Governance",
-    "Pilot, then smaller waves, then a big-bang cut-over, with dual-run operations, ledger reconciliation, database clustering and branch training."
-   ],
-   [
-    "Outcomes",
-    "End-of-day processing cut from six hours to under two; five-nines availability; SLAs met consistently across 12 years of managed services."
-   ]
-  ],
-  "k": [
-   "Mainframe migration",
-   "Oracle",
-   "Managed services"
-  ]
- },
- {
-  "c": "OCBC Bank | Singapore",
-  "y": "2005 – 2007",
-  "f": "batch",
-  "t": "Basel II RWA warehouse extraction and batch scheduling",
-  "d": "Extraction and Scheduling Lead for the group Basel II capital adequacy programme across Singapore, Malaysia and overseas affiliates.",
-  "p": [
-   [
-    "Architecture",
-    "Teradata MultiLoad, FastLoad and TPump pipelines from legacy cores into the RWA engine, with Control-M scheduling tuned to regulatory SLAs."
-   ],
-   [
-    "Scale",
-    "Scripts generated 5,000+ job definitions, and QA scripts checked them against the documented dependencies."
-   ]
-  ],
-  "k": [
-   "Basel II AIRB",
-   "Teradata",
-   "Control-M"
-  ]
- },
- {
-  "c": "Standard Chartered | Hong Kong hub",
-  "y": "2002 – 2005",
-  "f": "tom",
-  "t": "Project Cocteau: centrally hubbed, multi-tenant custody platform",
-  "d": "Led implementation of the multi-tenant New Custody System in the Atos Hong Kong data centre.",
-  "p": [
-   [
-    "Operating model",
-    "Processing moved to a shared-services hub while local entities kept regulatory ownership, approval authority and local central bank compliance across 10 countries."
-   ]
-  ],
-  "k": [
-   "Hub-and-spoke",
-   "Global custody",
-   "Shared services"
-  ]
- },
- {
-  "c": "Standard Chartered | Global",
-  "y": "2002 – 2005",
-  "f": "risk",
-  "t": "SCI 2.0 centralised credit limit management",
-  "d": "Product Manager and engineering head for the bank’s platform for central credit limit management and customer identification across branches.",
-  "p": [
-   [
-    "Limit hierarchy",
-    "Limit lifecycle from sovereign and group levels down to legal entity, facility and sub-line."
-   ],
-   [
-    "Execution",
-    "Real-time pre-deal reservations with overnight reconciliation against core ledgers; directed 100+ vendor engineers from TCS and HCL."
-   ],
-   [
-    "Integration",
-    "Published customer and limit data over the bank’s messaging middleware to core banking, cash, trade, Basel II and MIS systems."
-   ]
-  ],
-  "k": [
-   "Limit engine",
-   "Pre-deal checks",
-   "Local authorisation"
-  ]
- },
- {
-  "c": "Standard Chartered | Scope International",
-  "y": "2002 – 2005",
-  "f": "tom",
-  "t": "Multi-Business Platform clustered middleware upgrade",
-  "d": "Technical architect and product manager for the scan, print and process workflow engine serving international processing hubs.",
-  "p": [
-   [
-    "Scale",
-    "Phased upgrades of WebSphere, MQ Workflow and MQ Series with Network Dispatcher, Policy Director and HACMP failover, under load from Hogan cash and IMEX trade systems."
-   ]
-  ],
-  "k": [
-   "IBM WebSphere",
-   "MQ Workflow",
-   "HACMP"
-  ]
- },
- {
-  "c": "Standard Chartered | Singapore",
-  "y": "2000 – 2001",
-  "f": "batch",
-  "t": "Custody system upgrade and SWIFT 98/2000 compliance",
-  "d": "Technical upgrade of Sybase, TxSeries and Encina SFS alongside mandatory SWIFT 98/2000 standards.",
-  "p": [
-   [
-    "Execution",
-    "Refactored straight-through processing queues, background GL and charges generation, and online trade affirmation response times."
-   ]
-  ],
-  "k": [
-   "SWIFT 98/2000",
-   "Sybase",
-   "STP"
-  ]
- },
- {
-  "c": "Standard Chartered | Japan",
-  "y": "1999 – 2002",
-  "f": "batch",
-  "t": "Production performance recovery: 200%+ batch speed-up",
-  "d": "Led an IBM and Sybase task force to resolve batch cut-off SLA breaches after a Tokyo server upgrade.",
-  "p": [
-   [
-    "Method",
-    "Rebuilt a production replica at IBM labs and tuned AIX kernel parameters, Sybase buffer cache, lock schemes and CICS TxSeries regions."
-   ],
-   [
-    "Impact",
-    "200%+ faster batch timings and 60% better online trade settlement response; recognised with a special award from the Japan securities services and IT heads."
-   ]
-  ],
-  "k": [
-   "AIX",
-   "Sybase ASE",
-   "CICS TxSeries"
-  ]
- },
- {
-  "c": "Polaris Software Lab | Global consumer bank",
-  "y": "1997 – 1998",
-  "f": "digital",
-  "t": "Consumer banking branch workstation on mainframe",
-  "d": "Financial transaction services on the bank’s 3-tier consumer banking branch platform.",
-  "p": [
-   [
-    "Architecture",
-    "Visual Basic clients over SNA to mainframe CICS, COBOL and DB2 services via a message-level interface."
-   ]
-  ],
-  "k": [
-   "Mainframe CICS",
-   "COBOL / DB2",
-   "SNA"
-  ]
- }
-];
-const filters = [['all','All'],['tom','Operating model'],['ai','AI and data platforms'],['onboarding','Onboarding and lending'],['r2r','Ledgers and reconciliation'],['risk','Regulatory, risk and limits'],['batch','Batch and operations'],['digital','Digital channels and identity']];
-const tagName = Object.fromEntries(filters);
-const list = document.getElementById('worklist');
-work.forEach(w => {
-  const li = document.createElement('li'); li.dataset.f = w.f;
-  const pts = w.p.length ? `<details><summary>Details</summary><ul>${w.p.map(([l,t]) => `<li><strong>${l}:</strong> ${t}</li>`).join('')}</ul></details>` : '';
-  li.innerHTML = `<div><div class="who-c">${w.c}</div><div class="yr">${w.y}</div></div>
-    <div><h3>${w.t}</h3><p>${w.d}</p>${pts}<div class="chips">${w.k.map(k => `<span>${k}</span>`).join('')}</div></div><div class="tag">${tagName[w.f]}</div>`;
-  list.appendChild(li);
-});
-const fbox = document.getElementById('filters');
-filters.forEach(([k,label]) => {
-  const b = document.createElement('button'); b.type = 'button'; b.textContent = label; b.dataset.k = k;
-  b.setAttribute('aria-pressed', k === 'all');
-  b.addEventListener('click', () => applyFilter(k));
-  fbox.appendChild(b);
-});
-function applyFilter(k){
-  let n = 0;
-  list.querySelectorAll(':scope > li').forEach(li => { const show = k === 'all' || li.dataset.f === k; li.hidden = !show; if(show) n++; });
-  fbox.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === k));
-  document.getElementById('count').textContent = `${n} engagement${n === 1 ? '' : 's'}`;
-}
-applyFilter('all');
-document.querySelectorAll('.rel').forEach(b => b.addEventListener('click', () => { applyFilter(b.dataset.k); document.getElementById('projects').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }));
-</script>
+      <div class="tom-diagram">
+        <div class="tom-pipeline">
+          <div class="tom-step">
+            <div class="tom-step-num">PHASE 01</div>
+            <div class="tom-step-title">Digital Touchpoints</div>
+            <div class="tom-step-desc">Web, mobile, API gateways, partner H2H connections, and client onboarding state machines.</div>
+          </div>
+          <div class="tom-step">
+            <div class="tom-step-num">PHASE 02</div>
+            <div class="tom-step-title">AI Agent Wrapping</div>
+            <div class="tom-step-desc">Encapsulating legacy ERPs, core ledgers, and middle-office blocks with cognitive validation & deterministic exit criteria.</div>
+          </div>
+          <div class="tom-step">
+            <div class="tom-step-num">PHASE 03</div>
+            <div class="tom-step-title">Core Processing</div>
+            <div class="tom-step-desc">Order booking, real-time limit reservations (SCI), clearing, asset/liability trading, and settlement pipelines.</div>
+          </div>
+          <div class="tom-step">
+            <div class="tom-step-num">PHASE 04</div>
+            <div class="tom-step-title">Reconciliations & GL</div>
+            <div class="tom-step-desc">Nightly batch scheduling (Control-M), multi-entity journal entries, and balance sheet parity in Oracle GL / FAH.</div>
+          </div>
+          <div class="tom-step">
+            <div class="tom-step-num">PHASE 05</div>
+            <div class="tom-step-title">Regulatory Oversight</div>
+            <div class="tom-step-desc">OJK Antesena, Basel II/III/IV (AIRB, LCR, NSFR), and IFRS 9/17 statutory reporting engines.</div>
+          </div>
+        </div>
+
+        <div class="tom-oversight-bar">
+          <div class="tom-oversight-text">
+            <strong>Continuous Operational Telemetry & Guardrail Fabric:</strong> Real-time data probes embedded across all pipelines &bull; Human-in-the-loop (HITL) exception desks &bull; Four-eye maker-checker dual controls &bull; Immutable audit lineage.
+          </div>
+          <div class="badge badge-purple">Retained Local Accountability</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Areas of Specialism -->
+  <section id="specialisms">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Deep Domain & Technical Competencies</div>
+        <h2 class="section-heading">Areas of Specialism</h2>
+        <p class="section-sub">
+          Bridging functional banking operations, modern agentic AI engineering, and sovereign data infrastructures.
+        </p>
+      </div>
+
+      <div class="specialism-grid">
+        <!-- Card 1 -->
+        <div class="specialism-card">
+          <div class="specialism-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="specialism-title">Agentic & Generative AI</h3>
+          <p class="specialism-desc">
+            Pioneered specification-driven autonomous software delivery using Claude Code across 10 concurrent backend and frontend workstreams. Multi-agent workflow and QA orchestration with LangGraph, Playwright, Appium, and Postman/Newman. Self-hosted LLMs (Llama, Mistral), RAG architectures, Vector DBs, NVIDIA NIM inference, and AI ICR/OCR pipelines.
+          </p>
+          <div class="specialism-tags">
+            <span class="tech-tag">Claude Code</span>
+            <span class="tech-tag">LangGraph</span>
+            <span class="tech-tag">NVIDIA NIM</span>
+            <span class="tech-tag">RAG / Vector DB</span>
+            <span class="tech-tag">Local LLMs</span>
+            <span class="tech-tag">AI ICR/OCR</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="specialism-card">
+          <div class="specialism-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3V7c0-2-1.5-3-3.5-3h-9C5.5 4 4 5 4 7zm0 5h16M4 12c0 2 1.5 3 3.5 3h9c2 0 3.5-1 3.5-3"/></svg>
+          </div>
+          <h3 class="specialism-title">Modern Data Lakehouse</h3>
+          <p class="specialism-desc">
+            Architected modern lakehouse architectures displacing legacy HDFS. On-premise high-performance object storage on MinIO S3, Apache Iceberg, Trino, ClickHouse, and Dremio. Experience designing 35-node, 1 PB capacity lakehouse fabrics, real-time Kafka streaming, and data warehouse modernization across Cloudera/Hortonworks CDP and Teradata.
+          </p>
+          <div class="specialism-tags">
+            <span class="tech-tag">Apache Iceberg</span>
+            <span class="tech-tag">MinIO S3</span>
+            <span class="tech-tag">Trino / Dremio</span>
+            <span class="tech-tag">ClickHouse</span>
+            <span class="tech-tag">Apache Kafka</span>
+            <span class="tech-tag">Teradata</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="specialism-card">
+          <div class="specialism-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="specialism-title">Zero-Trust & Identity (IdP)</h3>
+          <p class="specialism-desc">
+            Architected proprietary Identity Provider (IdP) systems, cryptographic 2FA binding state machines, and out-of-band MFA delivery over satellite broadcast and BLE GATT profiles. Zero-trust principles, OAuth 2.0 / OIDC integrations, maker-checker dual authorization workflows, tamper-evident audit data models, and enterprise API gateways (Kong, Axway).
+          </p>
+          <div class="specialism-tags">
+            <span class="tech-tag">Custom IdP</span>
+            <span class="tech-tag">Out-of-Band 2FA</span>
+            <span class="tech-tag">OAuth 2.0 / OIDC</span>
+            <span class="tech-tag">BLE GATT</span>
+            <span class="tech-tag">Maker-Checker</span>
+            <span class="tech-tag">Zero Trust</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="specialism-card">
+          <div class="specialism-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          </div>
+          <h3 class="specialism-title">Technical Architecture & Cloud</h3>
+          <p class="specialism-desc">
+            Sovereign AI compute cluster design: facility power, cooling, compute, high-speed NVMe storage fabrics, and GPU nodes. Bare-metal Talos Kubernetes engineering, hybrid cloud platforms (AWS, Azure, GCP), Docker containerization, Terraform, Ansible, and automated batch scheduling engines (BMC Control-M, Tivoli) running 1,000+ daily EOD/BOD batch jobs.
+          </p>
+          <div class="specialism-tags">
+            <span class="tech-tag">GPU Clusters</span>
+            <span class="tech-tag">Talos K8s</span>
+            <span class="tech-tag">AWS / Azure / GCP</span>
+            <span class="tech-tag">Control-M</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">NVMe Fabric</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="specialism-card">
+          <div class="specialism-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="specialism-title">Core BFSI & Enterprise Limits</h3>
+          <p class="specialism-desc">
+            Enterprise Limit Management: implemented Single Customer Identifier (SCI) at Standard Chartered across ECAI group, entity, facility, and line levels. Deep mastery in Core Banking (loans, deposits, GL), Oracle Financials / FAH, Funds Transfer Pricing (FTP), Asset Quality (NPL), Basel II/III/IV (AIRB, LCR, NSFR), and IFRS 9 / 17 accounting engines.
+          </p>
+          <div class="specialism-tags">
+            <span class="tech-tag">SCI Limit Engine</span>
+            <span class="tech-tag">Basel II / III / IV</span>
+            <span class="tech-tag">IFRS 9 / IFRS 17</span>
+            <span class="tech-tag">Oracle FAH & GL</span>
+            <span class="tech-tag">FTP / Cost Alloc</span>
+            <span class="tech-tag">Custody & SWIFT</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="specialism-card">
+          <div class="specialism-icon">
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3 class="specialism-title">Programming & Full-Stack</h3>
+          <p class="specialism-desc">
+            Hands-on full-stack developer and architect: React 18, TypeScript, Vite, Redux Toolkit, and Ionic for modern banking frontends. Python scientific and data engineering ecosystem (NumPy, Pandas, Dask, RAPIDS, SciPy), Go, Java/J2EE, C/C++, Sybase, and shell scripting. Automated test execution with Playwright, Appium, and Newman.
+          </p>
+          <div class="specialism-tags">
+            <span class="tech-tag">React 18 / TS / Vite</span>
+            <span class="tech-tag">Python / Dask / Pandas</span>
+            <span class="tech-tag">Go & Java</span>
+            <span class="tech-tag">C / C++</span>
+            <span class="tech-tag">Playwright / Appium</span>
+            <span class="tech-tag">Postman / Newman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Project Catalog Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Comprehensive Enterprise Case Studies</div>
+        <h2 class="section-heading">Complete Project Portfolio Catalog</h2>
+        <p class="section-sub">
+          Detailed case studies across Tier-1 Banks, Central Banks, Insurance conglomerates, AI platforms, and Government institutions.
+        </p>
+      </div>
+
+      <!-- Controls -->
+      <div class="catalog-controls">
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">All Projects (28)</button>
+          <button class="filter-btn" data-filter="ai">AI & Agentic Systems</button>
+          <button class="filter-btn" data-filter="data">Data Lakehouse & Infra</button>
+          <button class="filter-btn" data-filter="bfsi">BFSI, Limits & RegTech</button>
+          <button class="filter-btn" data-filter="core">Core Ledgers & Reconciliations</button>
+          <button class="filter-btn" data-filter="digital">Digital Banking & Mobile</button>
+          <button class="filter-btn" data-filter="vintage">Foundational Core (2005)</button>
+        </div>
+        <div class="search-box">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <input type="text" id="projectSearch" placeholder="Search by client, technology, keyword...">
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectContainer">
+
+        <!-- Project 1 -->
+        <div class="project-card" data-category="ai digital">
+          <div class="project-header">
+            <span class="project-client">STARDOMES &bull; DUBAI, UAE</span>
+            <span class="project-date">Apr 2025 – Present</span>
+          </div>
+          <h3 class="project-title">Unified Identity Provider (IdP), Out-of-Band 2FA & Digital Banking</h3>
+          <p class="project-summary">
+            Architected and delivered an integrated high-assurance platform bridging an Identity Provider (IdP) with cryptographic 2FA, reference banking apps (web & mobile), and satellite IoT firmware.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Architecture & Delivery:</strong> Designed 2FA binding state machines between banking backends and IdP; engineered out-of-band satellite MFA over BLE GATT profiles via drop-in broadcast emulator. Deployed dual-authorization maker-checker workflows for corporate operations.</p>
+            <p><strong>Agentic Engineering:</strong> 10 specification-driven agent workstreams (5 BE, 5 FE) executed autonomously by Claude Code. Multi-agent QA orchestration using LangGraph across Playwright, Appium, and Postman/Newman.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">React 18 / TS / Vite</span>
+              <span class="tech-tag">Claude Code</span>
+              <span class="tech-tag">LangGraph</span>
+              <span class="tech-tag">BLE GATT</span>
+              <span class="tech-tag">OAuth 2.0 / OIDC</span>
+            </div>
+            <span class="badge">CTO Leadership</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="ai">
+          <div class="project-header">
+            <span class="project-client">STARDOMES &bull; DUBAI, UAE</span>
+            <span class="project-date">Apr 2025 – Present</span>
+          </div>
+          <h3 class="project-title">CWS (Connect Watch Secure) AI Tactical Surveillance Platform</h3>
+          <p class="project-summary">
+            Multi-tier, AI-driven surveillance and situational command platform fusing edge computer-vision inferencing, centralized analytics, and satellite telemetry backhaul.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Mission Scope:</strong> Engineered operational workflows for border security, dynamic VIP route protection, and tactical event dispatch under zero-trust conditions.</p>
+            <p><strong>Telemetry & Probes:</strong> Placed real-time edge probes and sensory telemetry across hybrid communications channels to maintain operational oversight and human-in-the-loop validation.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Edge AI</span>
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">Satcom Telemetry</span>
+              <span class="tech-tag">Command Center</span>
+            </div>
+            <span class="badge badge-teal">Tactical AI</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="ai data">
+          <div class="project-header">
+            <span class="project-client">TIER-1 ASEAN REGIONAL BANK</span>
+            <span class="project-date">2024 – 2025</span>
+          </div>
+          <h3 class="project-title">Kubernetes GPU AI Compute Cluster & NVIDIA NIM Inference</h3>
+          <p class="project-summary">
+            Enterprise Data and Analytics modernization: architected Kubernetes GPU compute infrastructure running NVIDIA NIM microservices for real-time document intelligence and local LLM inference.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Operational Oversight:</strong> Designed deterministic validation guardrails to prevent hallucination during regulatory document extraction and statutory filings.</p>
+            <p><strong>Stack:</strong> K8s GPU Pods, NVIDIA NIM, GPU Direct (RAPIDS/DALI), on-premise inference.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Kubernetes</span>
+              <span class="tech-tag">NVIDIA NIM</span>
+              <span class="tech-tag">RAPIDS</span>
+              <span class="tech-tag">Document AI</span>
+            </div>
+            <span class="badge badge-purple">Sovereign Compute</span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="data ai">
+          <div class="project-header">
+            <span class="project-client">INNDATA &bull; BANKING LAKEHOUSE</span>
+            <span class="project-date">2024 – 2025</span>
+          </div>
+          <h3 class="project-title">35-Node / 1 PB On-Premise Lakehouse & NL-to-SQL Query Engine</h3>
+          <p class="project-summary">
+            Designed an on-premise modern data lakehouse on MinIO S3 and Trino utilizing open table/file formats (Apache Iceberg, Parquet, ORC, AVRO) across a 35-node, 1 PB capacity hardware fabric.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Natural Language to SQL:</strong> Advised on self-hosted LLM query engine enabling natural language chat to SQL against core banking transactional data.</p>
+            <p><strong>Governance:</strong> Implemented query lineage probes and data parity audits against core general ledgers.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">MinIO S3</span>
+              <span class="tech-tag">Trino</span>
+              <span class="tech-tag">Apache Iceberg</span>
+              <span class="tech-tag">NL-to-SQL</span>
+              <span class="tech-tag">1 PB Fabric</span>
+            </div>
+            <span class="badge badge-teal">Lakehouse Scale</span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="ai bfsi">
+          <div class="project-header">
+            <span class="project-client">BOTMINDS.AI &bull; MUFG PHILIPPINE SUBSIDIARY</span>
+            <span class="project-date">2024 – 2025</span>
+          </div>
+          <h3 class="project-title">Agentic Loan Origination & Auto-Repair for SME / Retail Banking</h3>
+          <p class="project-summary">
+            Redesigned end-to-end retail and SME lending origination, wrapping legacy core banking systems with AI-based ICR/OCR, automated document collection, and autonomous repair agents.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Human-in-the-Loop:</strong> Established deterministic exception queues and verification gates, cutting credit underwriting turnaround time by over 60%.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Agentic Workflows</span>
+              <span class="tech-tag">AI ICR/OCR</span>
+              <span class="tech-tag">Loan Origination</span>
+              <span class="tech-tag">HITL Queues</span>
+            </div>
+            <span class="badge">Process Modernization</span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-category="bfsi data">
+          <div class="project-header">
+            <span class="project-client">INFIGOS / SINARMAS GROUP</span>
+            <span class="project-date">2024 – 2025</span>
+          </div>
+          <h3 class="project-title">Group-Wide Synthetic Identity Graph & IFRS 17 Actuarial Models</h3>
+          <p class="project-summary">
+            Built an enterprise-wide anti-fraud surveillance engine and synthetic identity graph database to detect organized fraud rings across banking and insurance subsidiaries.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Actuarial Validation:</strong> Formulated agentic and spreadsheet-based analytical models to audit and cross-check after-the-fact impacts during the IFRS 4 to IFRS 17 accounting transition.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Graph Database</span>
+              <span class="tech-tag">Fraud Rings</span>
+              <span class="tech-tag">IFRS 17</span>
+              <span class="tech-tag">Anti-Fraud Rules</span>
+            </div>
+            <span class="badge badge-amber">Risk & Fraud</span>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="project-card" data-category="bfsi core">
+          <div class="project-header">
+            <span class="project-client">BANK CENTRAL ASIA (BCA)</span>
+            <span class="project-date">2018 – 2020</span>
+          </div>
+          <h3 class="project-title">Regla® IFRS 9 ECL Automation for Indonesia's Largest Bank</h3>
+          <p class="project-summary">
+            Implemented comprehensive IFRS 9 Expected Credit Loss (ECL) calculation and automated accounting solution for PT Bank Central Asia, Tbk.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Challenge & Delivery:</strong> Bank required automated Business Model and Cash Flow Characteristic tests (SPPI), complex PD/LGD/EAD forward-looking staging, and Effective Interest Rate (EIR) amortized cost accounting across tens of millions of accounts.</p>
+            <p><strong>Outcome:</strong> Achieved industry benchmark submission SLAs and 100% compliance with audit and central bank scrutiny.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Regla IFRS 9</span>
+              <span class="tech-tag">PD / LGD / EAD</span>
+              <span class="tech-tag">EIR Amortization</span>
+              <span class="tech-tag">BCA Core</span>
+            </div>
+            <span class="badge badge-teal">Flagship BFSI</span>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card" data-category="data digital">
+          <div class="project-header">
+            <span class="project-client">BANK BTPN &bull; JENIUS DIGITAL BANK</span>
+            <span class="project-date">2016 – 2019</span>
+          </div>
+          <h3 class="project-title">Big Data Lake & Customer 360 Real-Time Analytics</h3>
+          <p class="project-summary">
+            Engineered the Big Data platform and Customer 360 data lake powering BTPN’s landmark Jenius digital bank, unifying multi-source transactional and external datasets.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Business Impact:</strong> Overcame siloed department data to deliver real-time personalized recommendations, next-best-action triggers, and predictive churn alerts.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Big Data Lake</span>
+              <span class="tech-tag">Customer 360</span>
+              <span class="tech-tag">Jenius Bank</span>
+              <span class="tech-tag">Next-Best-Action</span>
+            </div>
+            <span class="badge">Digital Pioneer</span>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="project-card" data-category="core bfsi">
+          <div class="project-header">
+            <span class="project-client">BANK BTPN</span>
+            <span class="project-date">2014 – 2017</span>
+          </div>
+          <h3 class="project-title">Oracle General Ledger & Financial Accounting Hub (FAH)</h3>
+          <p class="project-summary">
+            Resolved core banking ledger disconnects by implementing Oracle GL and Financial Accounting Hub (FAH) across all retail and microfinance operations.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Solution:</strong> Centralized Chart of Accounts (COA) maintenance, automated complex sub-ledger journal generation for non-standard transactions, automated revaluation in EDW, and eliminated nominal vs. GL balance reconciliation breaks.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Oracle FAH</span>
+              <span class="tech-tag">Oracle EGL</span>
+              <span class="tech-tag">COA Maintenance</span>
+              <span class="tech-tag">Reconciliation</span>
+            </div>
+            <span class="badge badge-purple">Core Ledger</span>
+          </div>
+        </div>
+
+        <!-- Project 10 -->
+        <div class="project-card" data-category="digital">
+          <div class="project-header">
+            <span class="project-client">BANK BTPN &bull; API MANAGEMENT</span>
+            <span class="project-date">2017 – 2019</span>
+          </div>
+          <h3 class="project-title">Active-Active (DC-DR) Enterprise API Gateway Architecture</h3>
+          <p class="project-summary">
+            Implemented enterprise API Management infrastructure delivering active-active DC-DR redundancy and 99.99% service availability for BTPN's digital ecosystem.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Impact:</strong> Standardized multi-protocol interfaces, accelerated third-party fintech and merchant onboarding from months to days, and decoupled frontend apps from legacy core backends.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">API Gateway</span>
+              <span class="tech-tag">Active-Active DC-DR</span>
+              <span class="tech-tag">Fintech H2H</span>
+              <span class="tech-tag">99.99% SLA</span>
+            </div>
+            <span class="badge">Fintech Integration</span>
+          </div>
+        </div>
+
+        <!-- Project 11 -->
+        <div class="project-card" data-category="core bfsi">
+          <div class="project-header">
+            <span class="project-client">PERMODALAN NASIONAL MADANI (PNM)</span>
+            <span class="project-date">2015 – 2018</span>
+          </div>
+          <h3 class="project-title">Oracle Financials & Microfinance Multi-Entity GL Consolidation</h3>
+          <p class="project-summary">
+            Architected and deployed Oracle Financials & FAH for Indonesia's state-owned microfinance giant, unifying accounting across 11 operating companies.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Complexity Handled:</strong> 12 automated interfaces across 6 distinct file formats, handling multi-currency processing, inter-branch balancing, and Net Open Position (NOP) across hundreds of internal bank accounts and thousands of micro-lending branches.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Oracle Financials</span>
+              <span class="tech-tag">Multi-Entity COA</span>
+              <span class="tech-tag">Microfinance GL</span>
+              <span class="tech-tag">Multi-Currency</span>
+            </div>
+            <span class="badge badge-purple">Enterprise GL</span>
+          </div>
+        </div>
+
+        <!-- Project 12 -->
+        <div class="project-card" data-category="core">
+          <div class="project-header">
+            <span class="project-client">BANK DANAMON</span>
+            <span class="project-date">2012 – 2016</span>
+          </div>
+          <h3 class="project-title">High-Volume Multi-Channel Enterprise Transaction Reconciliation</h3>
+          <p class="project-summary">
+            Re-engineered high-volume intraday and end-of-day transaction reconciliation covering ATM networks, Cash Deposit Machines (CDM), MasterCard, Visa, and utility payment channels.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Outcome:</strong> Replaced error-prone manual spreadsheets with an automated multi-way matching engine, cutting reconciliation processing time by 80% and prioritizing investigation of genuine settlement breaks.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Automated Recon</span>
+              <span class="tech-tag">ATM / CDM / Card</span>
+              <span class="tech-tag">Exception Workflow</span>
+              <span class="tech-tag">Settlement Breaks</span>
+            </div>
+            <span class="badge">Reconciliation</span>
+          </div>
+        </div>
+
+        <!-- Project 13 -->
+        <div class="project-card" data-category="core bfsi">
+          <div class="project-header">
+            <span class="project-client">BANK INDONESIA &bull; CENTRAL BANK</span>
+            <span class="project-date">2014 – 2016</span>
+          </div>
+          <h3 class="project-title">High-Value SWIFT Confirmation Matching Automation</h3>
+          <p class="project-summary">
+            Designed and implemented an automated confirmation matching engine for Bank Indonesia (Central Bank) processing third-party SWIFT transaction messages.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Value Proposition:</strong> Mitigated high-stakes operational risk in multi-billion dollar interbank clearings by replacing manual confirmation verification with automated ingestion, validation, and settlement sign-off.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Bank Indonesia</span>
+              <span class="tech-tag">SWIFT Messaging</span>
+              <span class="tech-tag">High-Value Clearing</span>
+              <span class="tech-tag">Automated Matching</span>
+            </div>
+            <span class="badge badge-teal">Central Bank</span>
+          </div>
+        </div>
+
+        <!-- Project 14 -->
+        <div class="project-card" data-category="bfsi">
+          <div class="project-header">
+            <span class="project-client">INDONESIAN DEPOSIT INSURANCE (LPS)</span>
+            <span class="project-date">2013 – 2017</span>
+          </div>
+          <h3 class="project-title">Core Statutory Solution for National Deposit Insurance (LPS)</h3>
+          <p class="project-summary">
+            Led solution development and delivery for the prestigious Core Solution for Lembaga Penjamin Simpanan (LPS) - Indonesia’s statutory Deposit Insurance Corporation.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Scope:</strong> Implemented mission-critical algorithms calculating bank premium contributions, deposit guarantee limits, and risk-weighted assessment models across all commercial and rural banks in Indonesia.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Deposit Insurance</span>
+              <span class="tech-tag">Statutory Risk</span>
+              <span class="tech-tag">National Core</span>
+              <span class="tech-tag">LPS Engine</span>
+            </div>
+            <span class="badge badge-purple">Sovereign Mandate</span>
+          </div>
+        </div>
+
+        <!-- Project 15 -->
+        <div class="project-card" data-category="bfsi">
+          <div class="project-header">
+            <span class="project-client">BANK INDONESIA / OJK &bull; 10+ BANKS</span>
+            <span class="project-date">2016 – 2020</span>
+          </div>
+          <h3 class="project-title">Regla® Antesena Central Bank Reporting Suite</h3>
+          <p class="project-summary">
+            Conceptualized, engineered, and rolled out Emerio's proprietary regulatory reporting product for Bank Indonesia / OJK Antesena (LBU, LBBU, SLIK, LKPBU) across more than 10 major commercial banks.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Accolades:</strong> Two client bank implementations were formally recognized by the central regulator as national benchmark deployments.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">OJK Antesena</span>
+              <span class="tech-tag">SLIK / LBU / LBBU</span>
+              <span class="tech-tag">FSI Data Model</span>
+              <span class="tech-tag">10+ Banks</span>
+            </div>
+            <span class="badge badge-teal">Award-Winning</span>
+          </div>
+        </div>
+
+        <!-- Project 16 -->
+        <div class="project-card" data-category="bfsi core">
+          <div class="project-header">
+            <span class="project-client">STANDARD CHARTERED BANK &bull; GLOBAL</span>
+            <span class="project-date">2002 – 2005</span>
+          </div>
+          <h3 class="project-title">Single Customer Identifier (SCI 2.0) & Central Credit Limit Management</h3>
+          <p class="project-summary">
+            Product Manager and Engineering Head for SCI 2.0—Standard Chartered Bank's strategic enterprise platform for centralized credit limit management and customer identification across global branches.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Multi-Tier Limit Hierarchy:</strong> Governed the complete limit lifecycle across <strong>ECAI sovereign/group levels, legal customer entity, facility, and sub-line levels</strong>.</p>
+            <p><strong>Execution:</strong> Combined real-time pre-deal intraday reservations with overnight reconciliation against core ledgers, directing 100+ vendor engineers across TCS and HCL.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">SCI Limit Engine</span>
+              <span class="tech-tag">ECAI Hierarchy</span>
+              <span class="tech-tag">Pre-Deal Checks</span>
+              <span class="tech-tag">SCB Global Hub</span>
+            </div>
+            <span class="badge badge-purple">Enterprise Limits</span>
+          </div>
+        </div>
+
+        <!-- Project 17 -->
+        <div class="project-card" data-category="core">
+          <div class="project-header">
+            <span class="project-client">STANDARD CHARTERED BANK &bull; ATOS HK</span>
+            <span class="project-date">2002 – 2005</span>
+          </div>
+          <h3 class="project-title">Project Cocteau: Centrally Hubbed Multitenant Custody Architecture</h3>
+          <p class="project-summary">
+            Pioneered the multitenant centralized deployment framework for the New Custody System (NCS) in the Atos Hong Kong Data Center.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Operating Model Innovation:</strong> Centralized heavy transactional processing into a shared-services hub while strictly preserving local entity regulatory ownership, approval authority, and local central bank compliance across 10 countries.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Hub-and-Spoke</span>
+              <span class="tech-tag">Project Cocteau</span>
+              <span class="tech-tag">Atos HK Datacenter</span>
+              <span class="tech-tag">Global Custody</span>
+            </div>
+            <span class="badge">Operating Model</span>
+          </div>
+        </div>
+
+        <!-- Project 18 -->
+        <div class="project-card" data-category="bfsi data">
+          <div class="project-header">
+            <span class="project-client">OCBC BANK &bull; SINGAPORE</span>
+            <span class="project-date">2005 – 2007</span>
+          </div>
+          <h3 class="project-title">Basel II RWA Warehouse, Teradata Extraction & Batch Scheduling</h3>
+          <p class="project-summary">
+            Extraction and Scheduling Lead for OCBC Group’s Basel II Capital Adequacy Ratio program across Singapore, Malaysia, and overseas affiliates.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Technical Architecture:</strong> Designed high-throughput Teradata MultiLoad, FastLoad, and TPump pipelines extracting from legacy banking cores into the centralized Risk-Weighted Assets (RWA) calculation engine, optimizing Control-M batch scheduling under tight regulatory SLAs.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Basel II AIRB</span>
+              <span class="tech-tag">Teradata MultiLoad</span>
+              <span class="tech-tag">Control-M</span>
+              <span class="tech-tag">OCBC Singapore</span>
+            </div>
+            <span class="badge badge-teal">Risk Architecture</span>
+          </div>
+        </div>
+
+        <!-- Project 19 -->
+        <div class="project-card" data-category="core">
+          <div class="project-header">
+            <span class="project-client">PRUDENTIAL INDONESIA</span>
+            <span class="project-date">2013 – 2016</span>
+          </div>
+          <h3 class="project-title">BMC Control-M Nightly Batch Scheduling Automation on iSeries</h3>
+          <p class="project-summary">
+            Modernized and automated insurance policy lifecycle batch runs for Prudential Indonesia, replacing manual operator night shifts with automated BMC Control-M scheduling.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Impact:</strong> Automated multi-system dependency triggers across daily, weekly, and monthly runs, eliminating manual execution errors and establishing comprehensive batch SLA tracking.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">BMC Control-M</span>
+              <span class="tech-tag">iSeries AS400</span>
+              <span class="tech-tag">Batch Automation</span>
+              <span class="tech-tag">Prudential</span>
+            </div>
+            <span class="badge">Batch Governance</span>
+          </div>
+        </div>
+
+        <!-- Project 20 -->
+        <div class="project-card" data-category="digital">
+          <div class="project-header">
+            <span class="project-client">BCA FINANCE</span>
+            <span class="project-date">2016 – 2018</span>
+          </div>
+          <h3 class="project-title">Mobile Loan Origination, Automotive Financing & Self-Service</h3>
+          <p class="project-summary">
+            Designed and built enterprise mobile applications for BCA Finance dealers and retail consumers across Indonesia.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Features:</strong> Automated credit simulation budget calculators, dynamic installment plans, early loan contract settlement simulations, and automated vehicle registration (STNK) extensions integrated with backend credit decisioning.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Mobile Lending</span>
+              <span class="tech-tag">Dealer Workflow</span>
+              <span class="tech-tag">Credit Simulation</span>
+              <span class="tech-tag">BCA Finance</span>
+            </div>
+            <span class="badge">Mobile Fintech</span>
+          </div>
+        </div>
+
+        <!-- Project 21 -->
+        <div class="project-card" data-category="digital">
+          <div class="project-header">
+            <span class="project-client">ASTRA LIFE &bull; ASTRA AVIVA</span>
+            <span class="project-date">2015 – 2017</span>
+          </div>
+          <h3 class="project-title">Digital Insurance E-Commerce & Agent Distribution Portal</h3>
+          <p class="project-summary">
+            Delivered Astra Life's online direct-to-consumer insurance sales portal and agent distribution platform with dynamic CMS and payment gateway integration.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Tech Architecture:</strong> Built responsive frontend in Angular with optimized SEO, automated policy quotation engines, and underwriting integrations.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">Payment Gateways</span>
+              <span class="tech-tag">E-Commerce</span>
+              <span class="tech-tag">Astra Life</span>
+            </div>
+            <span class="badge">Digital Portal</span>
+          </div>
+        </div>
+
+        <!-- Project 22 -->
+        <div class="project-card" data-category="data">
+          <div class="project-header">
+            <span class="project-client">ETIQA INSURANCE &bull; MALAYSIA / REGIONAL</span>
+            <span class="project-date">2017 – 2020</span>
+          </div>
+          <h3 class="project-title">Master Data Management (MDM) & Risk-Based Pricing Post De-Tariff</h3>
+          <p class="project-summary">
+            Implemented Master Data Management (MDM) establishing single golden records for customers, products, and agents for Etiqa Insurance across Malaysia.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Value Creation:</strong> Built household 360-degree views to identify family up-sell and cross-sell opportunities, and delivered risk-based pricing analytics following motor de-tariff deregulation.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">MDM Golden Record</span>
+              <span class="tech-tag">Household 360</span>
+              <span class="tech-tag">Risk-Based Pricing</span>
+              <span class="tech-tag">Etiqa</span>
+            </div>
+            <span class="badge badge-teal">MDM & Analytics</span>
+          </div>
+        </div>
+
+        <!-- Project 23 -->
+        <div class="project-card" data-category="core">
+          <div class="project-header">
+            <span class="project-client">LARGE INDONESIAN REGIONAL BANK</span>
+            <span class="project-date">2011 – 2015</span>
+          </div>
+          <h3 class="project-title">1,500-Branch Core Banking Migration from Mainframe to Oracle</h3>
+          <p class="project-summary">
+            Managed Services partner leading the stabilization and staged migration of 1,500 bank branches from legacy mainframe infrastructure to a modern Oracle core banking architecture.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Scale & Governance:</strong> Managed dual-run operations, zero-downtime ledger reconciliation, database clustering, and nationwide branch training.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Mainframe Migration</span>
+              <span class="tech-tag">Oracle CoreTech</span>
+              <span class="tech-tag">1,500 Branches</span>
+              <span class="tech-tag">Managed Services</span>
+            </div>
+            <span class="badge badge-purple">Core Migration</span>
+          </div>
+        </div>
+
+        <!-- Project 24 -->
+        <div class="project-card" data-category="data digital">
+          <div class="project-header">
+            <span class="project-client">LENTRA.AI &bull; PHILIPPINES WALLET</span>
+            <span class="project-date">2022 – 2023</span>
+          </div>
+          <h3 class="project-title">Deduplication of 80 Million Customer Records (CIF) via Biometrics</h3>
+          <p class="project-summary">
+            Architected and executed the multidimensional deduplication of 80 million customer records for one of the largest e-wallets in the Philippines.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Algorithms:</strong> Combined facial biometric recognition, phonetic name matching, and alternate identity data points to eliminate duplicate customer identities, paving the way for automated micro-lending.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">80M CIF Dedup</span>
+              <span class="tech-tag">Facial Biometrics</span>
+              <span class="tech-tag">Digital Lending</span>
+              <span class="tech-tag">Lentra.ai</span>
+            </div>
+            <span class="badge">Massive Scale</span>
+          </div>
+        </div>
+
+
+        <!-- Project 25: Japan H80 Rescue -->
+        <div class="project-card" data-category="core vintage bfsi">
+          <div class="project-header">
+            <span class="project-client">STANDARD CHARTERED BANK &bull; JAPAN</span>
+            <span class="project-date">1999 – 2002</span>
+          </div>
+          <h3 class="project-title">Japan H80 Production Performance Rescue (200%+ Batch Speedup)</h3>
+          <p class="project-summary">
+            Led a specialized IBM and Sybase "hot pursuit" task force to resolve critical batch cut-off SLA breaches following a server upgrade from J50 to H80 in Tokyo.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Tiger Team Methodology:</strong> Recreated an exact production replica at IBM labs; analyzed AIX kernel parameters, Sybase buffer cache allocation, lock schemes, and CICS TxSeries regions under high volume.</p>
+            <p><strong>Award-Winning Impact:</strong> Achieved a <strong>200%+ performance gain on batch job timings</strong> and <strong>60% improvement in online trade settlement response times</strong>, receiving a special award and commendation from Japan Securities Services and IT heads.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">AIX H80</span>
+              <span class="tech-tag">Sybase ASE</span>
+              <span class="tech-tag">TxSeries CICS</span>
+              <span class="tech-tag">Performance Tuning</span>
+            </div>
+            <span class="badge badge-teal">200% Speedup Award</span>
+          </div>
+        </div>
+
+        <!-- Project 26: MBP Clustered Architecture -->
+        <div class="project-card" data-category="core vintage digital">
+          <div class="project-header">
+            <span class="project-client">STANDARD CHARTERED BANK &bull; SCOPE</span>
+            <span class="project-date">2002 – 2005</span>
+          </div>
+          <h3 class="project-title">Multi-Business Platform (MBP) Clustered Middleware Upgrade</h3>
+          <p class="project-summary">
+            Technical Architect and Product Manager for SCB’s mission-critical scan, print, and process-driven workflow engine deployed on clustered AIX hardware across international processing hubs.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Architecture & Scale:</strong> Orchestrated phased upgrades of WebSphere Application Server (WAS 4.0 to 5.0), MQ Workflow (4.0 to 4.1), and MQ Series (3.0 to 4.0) with Network Dispatcher, Policy Director, and HACMP failover.</p>
+            <p><strong>Resilience:</strong> Handled heavy transaction stress from host cash systems (Hogan) and trade systems (IMEX) with zero operational downtime.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">IBM WebSphere</span>
+              <span class="tech-tag">MQ Workflow</span>
+              <span class="tech-tag">HACMP Clustering</span>
+              <span class="tech-tag">Hogan / IMEX</span>
+            </div>
+            <span class="badge badge-purple">Shared Services</span>
+          </div>
+        </div>
+
+        <!-- Project 27: NCS Version 3 & SWIFT -->
+        <div class="project-card" data-category="core vintage bfsi">
+          <div class="project-header">
+            <span class="project-client">STANDARD CHARTERED BANK &bull; SINGAPORE</span>
+            <span class="project-date">2000 – 2001</span>
+          </div>
+          <h3 class="project-title">NCS Version 3 Upgrade & Global SWIFT 98/2000 Compliance</h3>
+          <p class="project-summary">
+            Managed the technical upgrade of Sybase (11.0.3 to 11.9.2), TxSeries (4.2 to 4.3), and Encina SFS while implementing mandatory global SWIFT 98/2000 regulatory standards.
+          </p>
+          <div class="project-details-block">
+            <p><strong>Execution:</strong> Refactored Straight-Through Processing (STP) queues, background GL and charges generation, and online trade affirmation response times under high transaction load.</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">SWIFT 98/2000</span>
+              <span class="tech-tag">TxSeries 4.3</span>
+              <span class="tech-tag">Sybase 11.9.2</span>
+              <span class="tech-tag">STP Clearing</span>
+            </div>
+            <span class="badge">SWIFT Compliance</span>
+          </div>
+        </div>
+
+        <!-- Project 28: Citibank SABRE -->
+        <div class="project-card" data-category="core vintage digital">
+          <div class="project-header">
+            <span class="project-client">CITIBANK &bull; POLARIS SOFTWARE LAB</span>
+            <span class="project-date">1997 – 1998</span>
+          </div>
+          <h3 class="project-title">Citibank SABRE Consumer Banking Workstation & Mainframe MLI</h3>
+          <p class="project-summary">
+            Consultant for Citibank Group Technology Office (Singapore), developing financial transaction services on SABRE—Citibank's 3-tier consumer banking branch platform.
+          </p>
+          <div class="project-details-block">
+            <p><strong>3-Tier Architecture:</strong> Connected Visual Basic clients over SNA to mainframe CICS/COBOL/DB2 services using Citibank’s patented Message-Level Interface (MLI) and Graphical Desktop Manager (GDM).</p>
+          </div>
+          <div class="project-footer">
+            <div class="specialism-tags">
+              <span class="tech-tag">Citibank SABRE</span>
+              <span class="tech-tag">Mainframe CICS</span>
+              <span class="tech-tag">COBOL / DB2</span>
+              <span class="tech-tag">SNA / MLI</span>
+            </div>
+            <span class="badge">Foundational</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Limit Management Deep Dive -->
+  <section id="limit-management" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Specialized BFSI Core Architecture</div>
+        <h2 class="section-heading">Enterprise Limit Management & Credit Hierarchy Mastery</h2>
+        <p class="section-sub">
+          Hands-on leadership architecting and implementing Single Customer Identifier (SCI) and centralized credit limit management for Standard Chartered Bank.
+        </p>
+      </div>
+
+      <div class="limit-banner">
+        <h3 style="font-size: 20px; color: #ffffff;">Standard Chartered Bank SCI 2.0 Limit Architecture</h3>
+        <p style="color: #cbd5e1; margin-top: 6px; font-size: 14px;">
+          Full lifecycle limit state machines combining real-time pre-deal intraday reservations with overnight core banking reconciliations:
+        </p>
+
+        <div class="limit-grid">
+          <div class="limit-level">
+            <div class="limit-level-title">01. ECAI / Ultimate Group</div>
+            <div class="limit-level-desc">Sovereign and global parent exposure caps, cross-border country risk aggregation, and multi-entity global group limits.</div>
+          </div>
+          <div class="limit-level">
+            <div class="limit-level-title">02. Customer Entity</div>
+            <div class="limit-level-desc">Single customer identifier (CIF/CIF-dedup), legal entity borrower exposure, risk ratings, and consolidated debt ceilings.</div>
+          </div>
+          <div class="limit-level">
+            <div class="limit-level-title">03. Facility Level</div>
+            <div class="limit-level-desc">Revolving & non-revolving facilities, term loans, trade finance, guarantees, and treasury market lines.</div>
+          </div>
+          <div class="limit-level">
+            <div class="limit-level-title">04. Line & Account Level</div>
+            <div class="limit-level-desc">Real-time intraday earmarking, drawdown validation, temporary excess approval workflows, and collateral allocations.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Experience Timeline -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Leadership Trajectory</div>
+        <h2 class="section-heading">Professional Experience & Milestones</h2>
+        <p class="section-sub">Over three decades delivering transformative platforms across Southeast Asia and global markets.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Role 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-role">Chief Technology Officer / Head of Platform Architecture</span> &bull; 
+                <span class="timeline-company">STARDOMES</span>
+              </div>
+              <span class="timeline-meta">Dubai, United Arab Emirates &bull; April 2025 – Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Architected a multi-component platform spanning a proprietary Identity Provider (IdP) with 2FA, reference banking apps (web and mobile), CWS AI tactical surveillance, and satellite-communications IoT firmware.</li>
+              <li>Engineered cryptographic 2FA binding state machines and out-of-band satellite MFA delivery over BLE GATT profiles and broadcast emulator.</li>
+              <li>Pioneered agent-driven engineering: structured backend and frontend work into specifications executed by Claude Code across 10 parallel workstreams, paired with LangGraph multi-agent test automation (Playwright, Appium, Newman).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-role">Principal Consultant & Enterprise AI Advisor</span> &bull; 
+                <span class="timeline-company">INDEPENDENT ADVISORY</span>
+              </div>
+              <span class="timeline-meta">Singapore &bull; May 2024 – Feb 2025</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Tier-1 ASEAN Bank: Architected Kubernetes GPU compute with NVIDIA NIM for document extraction and local LLM inference with regulatory guardrails.</li>
+              <li>InnData: Advised on self-hosted natural-language-to-SQL engine and a 35-node, 1 PB on-premise lakehouse (MinIO, Trino, Iceberg).</li>
+              <li>Botminds.ai: Redesigned retail/SME loan origination for MUFG subsidiary bank using AI ICR/OCR and human-in-the-loop exception queues.</li>
+              <li>Infigos / Sinarmas: Built group-wide synthetic identity fraud-ring database and IFRS 4 to IFRS 17 actuarial validation models.</li>
+              <li>HM Land Registry conveyancing automation (PCC-AI, UK); blockchain strategy for FootballGoalCoin; Talos bare-metal Kubernetes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-role">Executive – APAC Solutions & GTM Leader</span> &bull; 
+                <span class="timeline-company">MinIO</span>
+              </div>
+              <span class="timeline-meta">Singapore &bull; October 2023 – May 2024</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Led APAC GTM strategy and modern data lakehouse architectures on MinIO S3 object storage for premier regional financial institutions, displacing legacy HDFS.</li>
+              <li>Conducted architectural design reviews for large-scale regulatory reporting on ClickHouse and MinIO.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-role">Regional Solution Leader – ASEAN</span> &bull; 
+                <span class="timeline-company">LENTRA.AI</span>
+              </div>
+              <span class="timeline-meta">Singapore &bull; December 2022 – August 2023</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Directed ASEAN solution architecture for Lentra's SaaS digital lending platform, mapping customer onboarding touchpoints and automated credit decision trees.</li>
+              <li>Executed biometric and multidimensional deduplication of 80 million customer records (CIF) for a premier Philippine digital wallet.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 5 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-role">Solutions Leader – Digital Transformation & Architecture</span> &bull; 
+                <span class="timeline-company">NTT INDONESIA TECHNOLOGY</span>
+              </div>
+              <span class="timeline-meta">Jakarta, Indonesia &bull; January 2020 – May 2022</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Led 130+ professionals across Digital Transformation and Service Architecture practices; delivered enterprise modernizations across banking, automotive, and Cinema 21.</li>
+              <li>Delivered core BFSI trading platforms, digital banking general ledgers, customer 360 real-time data lakes, and ITIL Day-2 support models.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 6 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-role">Director – Delivery, Products and Presales (60x Scaling)</span> &bull; 
+                <span class="timeline-company">PT EMERIO INDONESIA / NTT DIGITAL BUSINESS SOLUTIONS</span>
+              </div>
+              <span class="timeline-meta">Jakarta, Indonesia &bull; February 2007 – January 2020</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Scaled annual revenue from USD 500,000 in 2007 to over USD 30 Million by 2020 (60x growth), building 5 profitable business units with 500+ employees.</li>
+              <li>Governed 200+ annual project deliverables for 50+ enterprise clients under 5% schedule and cost variance.</li>
+              <li>Conceptualized and rolled out the Regla Antesena regulatory suite across 10+ banks, Basel II/III implementations, and Oracle GL/FAH/OFSAA deployments.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Earlier Career -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <span class="timeline-role">Foundational Leadership: OCBC Bank, Standard Chartered & Polaris</span>
+              </div>
+              <span class="timeline-meta">Singapore &bull; 1997 – 2007</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li><strong>OCBC Singapore (2005–2007):</strong> Basel II Extraction & Scheduling Lead (Teradata, BMC Control-M).</li>
+              <li><strong>Standard Chartered Scope International (2002–2005):</strong> Product Manager & Head of ISCI Custody (SCI 2.0 Central Limit Management, Project Cocteau Atos HK Hub).</li>
+              <li><strong>Standard Chartered Bank Singapore (1998–2002):</strong> Systems Analyst for 10 countries across SEA.</li>
+              <li><strong>Polaris Software Lab (1997–1998):</strong> Consultant for Citibank SABRE.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Downloads & Resources -->
+  <section id="downloads">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Document Artifacts</div>
+        <h2 class="section-heading">Executive Resumes & Presentation Decks</h2>
+        <p class="section-sub">Download formatted CVs, ATS-ready files, or presentation decks for offline review.</p>
+      </div>
+
+      <div class="downloads-grid">
+        <a href="Maxious_Manohar_Benedict_ATS_Resume_2026.txt" download class="download-card">
+          <svg class="download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <div class="download-name">ATS-Ready CV</div>
+          <div class="download-sub">Clean Text Format (.txt)</div>
+        </a>
+
+        <a href="Maxious_Manohar_Benedict_Resume_2026.html" target="_blank" class="download-card">
+          <svg class="download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          <div class="download-name">Executive Printable CV</div>
+          <div class="download-sub">Print-to-PDF Ready (.html)</div>
+        </a>
+
+        <a href="Maxious_Manohar_Benedict_CV_2026.pptx" download class="download-card">
+          <svg class="download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+          <div class="download-name">PowerPoint Deck</div>
+          <div class="download-sub">8-Slide Executive Deck (.pptx)</div>
+        </a>
+
+        <a href="Maxious_Manohar_Benedict_Resume_2026.md" download class="download-card">
+          <svg class="download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          <div class="download-name">Markdown CV</div>
+          <div class="download-sub">Standard Markdown (.md)</div>
+        </a>
+
+        <a href="2005/01_SCB_Standard_Chartered_Master_Case_Studies.md" target="_blank" class="download-card">
+          <svg class="download-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+          <div class="download-name">2005 Archive Case Studies</div>
+          <div class="download-sub">SCB, OCBC & NTT (Full Archive)</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <h3 style="color: #ffffff; font-size: 22px; margin-bottom: 8px;">Let's Connect</h3>
+      <p style="max-width: 600px; margin: 0 auto 20px auto; color: #94a3b8;">
+        Open for strategic transformation advisory, Chief Technology Officer roles, and enterprise AI leadership engagements globally.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 30px; flex-wrap: wrap;">
+        <a href="mailto:manohar.benedict@gmail.com" class="btn btn-primary">Email: manohar.benedict@gmail.com</a>
+        <a href="https://www.linkedin.com/in/maxious-manohar-benedict/" target="_blank" class="btn btn-outline">LinkedIn Profile</a>
+      </div>
+      <div>
+        Dubai, United Arab Emirates &bull; Singapore Permanent Resident &bull; &copy; 2026 Maxious Manohar Benedict
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript for Filtering and Search -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('.project-card');
+      const searchInput = document.getElementById('projectSearch');
+
+      let currentFilter = 'all';
+      let currentSearch = '';
+
+      function applyFilterAndSearch() {
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          const text = card.textContent.toLowerCase();
+
+          const matchesFilter = (currentFilter === 'all') || category.includes(currentFilter);
+          const matchesSearch = currentSearch === '' || text.includes(currentSearch);
+
+          if (matchesFilter && matchesSearch) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.getAttribute('data-filter');
+          applyFilterAndSearch();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentSearch = e.target.value.toLowerCase().trim();
+          applyFilterAndSearch();
+        });
+      }
+    });
+  </script>
 </body>
 </html>

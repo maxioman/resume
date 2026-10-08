@@ -1,196 +1,803 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maxious Manohar Benedict | Resume 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#12263A;--text:#24313D;--muted:#5B6B7A;--rule:#D5DCE3;--signal:#C9861F;--teal:#2F8F83;--paper:#F3F5F7}
-*{box-sizing:border-box}
-html{background:var(--paper)}
-body{margin:0;font-family:"IBM Plex Sans",Arial,sans-serif;font-size:10.5pt;line-height:1.45;color:var(--text)}
-.toolbar{max-width:1060px;margin:16px auto 0;padding:0 24px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.toolbar button,.toolbar a{font:500 14px "IBM Plex Sans",sans-serif;padding:8px 16px;border-radius:6px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;text-decoration:none}
-.toolbar a{background:transparent;color:var(--ink)}
-.toolbar button:focus-visible,.toolbar a:focus-visible,a:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
-.page{max-width:1060px;margin:16px auto 40px;background:#fff;padding:44px 52px;box-shadow:0 1px 3px rgba(18,38,58,.12)}
-h1{font-family:"IBM Plex Serif",Georgia,serif;font-size:26pt;font-weight:600;color:var(--ink);margin:0;letter-spacing:-.01em}
-.role{font-size:12.5pt;font-weight:500;color:var(--signal);margin:4px 0 8px}
-.contact{color:var(--muted);font-size:10pt;margin:0}
-.contact a{color:var(--ink)}
-h2{font-family:"IBM Plex Serif",Georgia,serif;font-size:13pt;font-weight:600;color:var(--ink);margin:22px 0 8px;padding-bottom:4px;border-bottom:1.5px solid var(--ink);break-after:avoid}
-h3{font-size:11pt;font-weight:600;color:var(--ink);margin:14px 0 0;break-after:avoid}
-.meta{color:var(--muted);font-size:10pt;margin:1px 0 4px}
-.lede{margin:4px 0}
-p{margin:6px 0}
-ul,ol{margin:4px 0;padding-left:18px}
-li{margin:2px 0}
-li::marker{color:var(--muted)}
-ol li::marker{color:var(--signal);font-weight:600}
-strong{color:var(--ink);font-weight:600}
-.comp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 22px}
-.comp div{break-inside:avoid}
-.comp b{display:block;color:var(--ink);font-weight:600;font-size:10pt}
-.comp span{color:var(--text);font-size:9.5pt}
-.job{break-inside:avoid-page}
-@media (max-width:760px){.page{padding:28px 20px}.comp{grid-template-columns:1fr}}
-@media print{
-  @page{size:A4;margin:9mm 11mm}
-  html,body{background:#fff}
-  .toolbar{display:none}
-  .page{max-width:none;margin:0;padding:0;box-shadow:none}
-  body{font-size:9.6pt;line-height:1.38}
-  h1{font-size:22pt}
-  h2{margin:14px 0 6px}
-  a{color:inherit;text-decoration:none}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maxious Manohar Benedict - Executive Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a1120;
+      --primary-accent: #1e3a8a;
+      --secondary: #1e293b;
+      --accent-blue: #0284c7;
+      --accent-teal: #0f766e;
+      --border-color: #cbd5e1;
+      --bg-card: #f8fafc;
+      --text-dark: #090d16;
+      --text-muted: #334155;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: var(--secondary);
+      background-color: #e2e8f0;
+      line-height: 1.5;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Print Toolbar (Screen Only) */
+    .print-toolbar {
+      max-width: 1060px;
+      margin: 18px auto 0 auto;
+      background: #0f172a;
+      color: #f8fafc;
+      padding: 12px 20px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+      gap: 16px;
+    }
+
+    .toolbar-info {
+      font-size: 12.5px;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+
+    .toolbar-info strong {
+      color: #38bdf8;
+    }
+
+    .print-btn {
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .print-btn:hover {
+      background: #0369a1;
+    }
+
+    /* Broader Main Container */
+    .container {
+      max-width: 1060px;
+      margin: 16px auto 36px auto;
+      background: #ffffff;
+      padding: 38px 46px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    h1.name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--primary);
+      line-height: 1.1;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .title-tag {
+      font-size: 15.5px;
+      font-weight: 700;
+      color: var(--primary-accent);
+      margin-top: 6px;
+      margin-bottom: 8px;
+      letter-spacing: 0.2px;
+      text-align: left;
+    }
+
+    .contact-info {
+      text-align: left;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: var(--secondary);
+      margin-bottom: 14px;
+    }
+
+    .contact-row {
+      text-align: left;
+      margin-bottom: 2px;
+    }
+
+    .contact-info a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Metrics Bar */
+    .metrics-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 12px 0 2px 0;
+      background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
+      padding: 11px 16px;
+      border-radius: 6px;
+      color: #ffffff;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .metric-item {
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .metric-item:last-child {
+      border-right: none;
+    }
+
+    .metric-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #38bdf8;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .metric-lbl {
+      font-size: 10.5px;
+      color: #e2e8f0;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* Section Styles */
+    section {
+      margin-bottom: 20px;
+    }
+
+    h2.section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1.5px solid var(--border-color);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    h2.section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+    }
+
+    .thesis-box {
+      background: #f8fafc;
+      border-left: 4px solid #0284c7;
+      border-right: 1px solid #e2e8f0;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 10px;
+      font-size: 12.8px;
+      line-height: 1.55;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .thesis-box strong {
+      color: var(--primary);
+    }
+
+    /* 3-Column Skills Grid (Fits 6 cards cleanly in 2 rows) */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      padding: 8px 11px;
+      border-radius: 5px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .skill-category {
+      font-weight: 700;
+      font-size: 11px;
+      color: var(--primary-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 3px;
+    }
+
+    .skill-desc {
+      font-size: 11.5px;
+      color: var(--secondary);
+      line-height: 1.4;
+    }
+
+    /* Experience */
+    .job {
+      margin-bottom: 16px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+      break-after: avoid;
+      page-break-after: avoid;
+    }
+
+    .job-role {
+      font-size: 13.8px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .job-company {
+      font-size: 13.8px;
+      font-weight: 700;
+      color: var(--accent-blue);
+    }
+
+    .job-meta {
+      font-size: 11.8px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .job-subtitle {
+      font-size: 12px;
+      font-style: italic;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+
+    ul.bullet-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 4px;
+      font-size: 12.5px;
+      color: var(--text-dark);
+      line-height: 1.48;
+    }
+
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 3px;
+      top: -1px;
+      color: var(--accent-blue);
+      font-size: 15px;
+    }
+
+    ul.bullet-list li strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .early-career-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11.5px;
+      margin-top: 6px;
+    }
+
+    .early-career-table td {
+      padding: 5px 8px;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+      line-height: 1.4;
+    }
+
+    .early-career-table td.year {
+      width: 95px;
+      font-weight: 700;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .early-career-table td.role-title {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .cert-box {
+      margin-top: 8px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      background: var(--bg-card);
+      padding: 7px 11px;
+      border-radius: 5px;
+      border: 1px solid var(--border-color);
+      break-inside: avoid;
+      page-break-inside: avoid;
+      line-height: 1.45;
+    }
+
+    /* Print Specific Media Rules */
+    @page {
+      size: A4 portrait;
+      margin: 8mm 11mm 8mm 11mm;
+    }
+
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        color: #090d16 !important;
+        font-size: 9.3pt !important;
+        line-height: 1.4 !important;
+      }
+      .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+      header {
+        padding-bottom: 10px !important;
+        margin-bottom: 10px !important;
+      }
+      h1.name {
+        font-size: 24pt !important;
+        margin-bottom: 2px !important;
+      }
+      .title-tag {
+        font-size: 11.5pt !important;
+        margin-top: 3px !important;
+        margin-bottom: 5px !important;
+      }
+      .contact-info {
+        font-size: 9.2pt !important;
+        margin-bottom: 8px !important;
+        line-height: 1.35 !important;
+      }
+      .metrics-bar {
+        padding: 7px 12px !important;
+        margin: 6px 0 2px 0 !important;
+        background: #090d16 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      .metric-val {
+        font-size: 15pt !important;
+      }
+      .metric-lbl {
+        font-size: 7.5pt !important;
+      }
+      section {
+        margin-bottom: 11px !important;
+      }
+      h2.section-title {
+        font-size: 11pt !important;
+        padding-bottom: 2px !important;
+        margin-bottom: 7px !important;
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+      }
+      .thesis-box {
+        padding: 6px 10px !important;
+        margin-bottom: 6px !important;
+        font-size: 8.8pt !important;
+        line-height: 1.4 !important;
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      .skills-grid {
+        gap: 6px !important;
+        margin-bottom: 2px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      .skill-card {
+        padding: 5px 8px !important;
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      .skill-category {
+        font-size: 8pt !important;
+        margin-bottom: 1px !important;
+      }
+      .skill-desc {
+        font-size: 8.2pt !important;
+        line-height: 1.3 !important;
+      }
+      .job {
+        margin-bottom: 10px !important;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      .job-header {
+        margin-bottom: 1px !important;
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+      }
+      .job-role, .job-company {
+        font-size: 10pt !important;
+      }
+      .job-meta {
+        font-size: 8.8pt !important;
+      }
+      .job-subtitle {
+        font-size: 8.3pt !important;
+        margin-bottom: 3px !important;
+      }
+      ul.bullet-list li {
+        font-size: 8.8pt !important;
+        line-height: 1.38 !important;
+        margin-bottom: 2px !important;
+        padding-left: 12px !important;
+      }
+      .early-career-table td {
+        padding: 3px 6px !important;
+        font-size: 8.2pt !important;
+        line-height: 1.3 !important;
+      }
+      .cert-box {
+        padding: 5px 9px !important;
+        margin-top: 6px !important;
+        font-size: 8.2pt !important;
+        line-height: 1.35 !important;
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="toolbar">
-  <button type="button" onclick="window.print()">Print or save as PDF</button>
-  <a href="index.html">Back to website</a>
-  <a href="Maxious_Manohar_Benedict_ATS_Resume_2026.txt" download>ATS plain text</a>
-</div>
-<main class="page">
 
-<header>
-  <h1>Maxious Manohar Benedict</h1>
-  <p class="role">Enterprise AI Transformation Leader | Target Operating Model Redesign | End-to-End Processing Oversight</p>
-  <p class="contact">Dubai, United Arab Emirates (Singapore Permanent Resident)</p>
-  <p class="contact">Phone: +971 527 752 927 | +65 8925 4729</p>
-  <p class="contact">Email: <a href="mailto:manohar.benedict@gmail.com">manohar.benedict@gmail.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/maxious-manohar-benedict/">linkedin.com/in/maxious-manohar-benedict</a></p>
-</header>
+  <!-- Screen Only Print Bar -->
+  <div class="no-print print-toolbar">
+    <div class="toolbar-info">
+      <strong>Broader Layout & Print Optimization:</strong> For the cleanest PDF, click <em>Print / Save as PDF</em>, set <strong>Margins: Default or Minimum</strong>, and check <strong>Background graphics: ON</strong>.
+    </div>
+    <button class="print-btn" onclick="window.print()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Print / Save as PDF
+    </button>
+  </div>
 
-<h2>Executive Profile</h2>
-<p>Enterprise AI transformation leader with 29 years redesigning how banks and large regulated enterprises process information, from front office through middle and back office to general ledger and regulatory reporting. Works with Group COOs, CIOs and Heads of Transformation on heterogeneous legacy estates: legacy ERPs, core ledgers, middle-office reconciliation and Control-M batch scheduling. Combines target operating model design with hands-on platform architecture, and has built and run a USD 30M+ technology services business.</p>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1 class="name">MAXIOUS MANOHAR BENEDICT</h1>
+      <div class="title-tag">Enterprise AI Transformation Leader | Target Operating Model Strategist | Platform Architect</div>
+      <div class="contact-info">
+        <div class="contact-row">Dubai, United Arab Emirates (Singapore Permanent Resident)</div>
+        <div class="contact-row">
+          <span>Phone: +971 527 752 927, +65 8925 4729</span> &bull; 
+          <span>Email: <a href="mailto:manohar.benedict@gmail.com">manohar.benedict@gmail.com</a></span> &bull; 
+          <span>LinkedIn: <a href="https://www.linkedin.com/in/maxious-manohar-benedict/" target="_blank">linkedin.com/in/maxious-manohar-benedict</a></span>
+        </div>
+      </div>
 
-<h3>Transformation thesis</h3>
-<p>Enterprise AI transformation is usually sold as automation and speed. The organisation must still oversee end-to-end processing once AI is in it. My method, in order:</p>
-<ol>
-  <li><strong>Assess oversight readiness.</strong> Baseline how each function in the value stream is delivered across systems A, B and C, how those systems hand off to each other, and what is measured today, before any AI is introduced.</li>
-  <li><strong>Map the value stream.</strong> Trace data, validations, approvals and functional execution from front office to general ledger and regulatory reporting, and redraw it into a target operating model.</li>
-  <li><strong>Wrap legacy building blocks.</strong> Add AI extraction, validation and reconciliation to existing "lego blocks", each with explicit exit criteria.</li>
-  <li><strong>Place oversight checkpoints.</strong> Position probes, guardrails and human-in-the-loop sanity checks so tracking, SLA and control evidence continue across all pipeline types: AI-automated, human-in-the-loop, batch, straight-through, manual data entry, and customer mobile and web touchpoints.</li>
-  <li><strong>Govern locally.</strong> Authority, approval and SOP compliance stay with accountable local owners.</li>
-</ol>
+      <div class="metrics-bar">
+        <div class="metric-item">
+          <span class="metric-val">28+ Years</span>
+          <span class="metric-lbl">Operating Models & Systems</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">$30M+ Built</span>
+          <span class="metric-lbl">60x Revenue Growth</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">500+ Led</span>
+          <span class="metric-lbl">Engineers & Architects</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-val">BFSI &bull; Retail</span>
+          <span class="metric-lbl">Legacy to AI Value Streams</span>
+        </div>
+      </div>
+    </header>
 
-<h3>Scale and heritage</h3>
-<ul>
-  <li><strong>Operating model precursor:</strong> led implementation of Standard Chartered's centrally hubbed, multi-tenant custody platform (Project Cocteau) and headed the Multi-Business Platform team. Processing moved to a hub while local entities kept sign-off and SOPs.</li>
-  <li><strong>60x commercial growth:</strong> grew a technology services business from USD 0.5M to USD 30M+ in annual revenue, building 5 business units and 500+ staff.</li>
-  <li><strong>Agentic delivery:</strong> architects Stardomes' identity, digital banking and CWS platforms using specification-driven agent workstreams (Claude Code, LangGraph) with end-to-end audit trails.</li>
-</ul>
+    <!-- Executive Profile & Thesis -->
+    <section>
+      <h2 class="section-title">Executive Profile & Transformation Thesis</h2>
+      <p style="margin-bottom: 8px; font-size: 13px; line-height: 1.55;">
+        Enterprise Transformation Leader and Principal Systems Architect with 28+ years of experience engineering mission-critical operating models, complex information pipelines, and technology platforms across Tier-1 Banking, Retail, and global conglomerates.
+      </p>
+      <div class="thesis-box">
+        <strong>The Enterprise AI Transformation Thesis:</strong> True transformation is not isolated "automation" widgets. It is the architectural discipline of:
+        <ul style="margin-top: 5px; padding-left: 18px;">
+          <li><strong>Mapping the End-to-End Value Stream:</strong> Unifying order booking, processing, inventory, middle-office validation, reconciliations, cash flow, GL posting, and regulatory compliance across legacy ERPs, core ledgers, and digital touchpoints.</li>
+          <li><strong>Wrapping Legacy "Lego Blocks" with AI:</strong> Deconstructing monolithic legacy systems and wrapping them with deterministic AI agents, cognitive validation pipelines, and strict exit criteria—mirroring how manual workflows were historically migrated to shared-services hubs while retaining local SOPs.</li>
+          <li><strong>Operational Oversight & Guardrails:</strong> Placing fundamental data probes, telemetry sensors, and human-in-the-loop (HITL) checkpoints across hybrid execution pipelines (Straight-Through Processing, batch workflows, and manual escalations) to guarantee retained accountability and SLA governance.</li>
+        </ul>
+      </div>
+    </section>
 
-<h2>Core Competencies</h2>
-<div class="comp">
-  <div><b>Target operating model</b><span>Oversight readiness assessment, value stream mapping, hub-and-spoke back-office redesign, shared services, end-to-end SLA design</span></div>
-  <div><b>AI transformation of legacy estates</b><span>Legacy building-block wrapping, AI extraction and validation, exit criteria design, hybrid pipelines (STP, batch, human-in-the-loop)</span></div>
-  <div><b>Oversight and guardrails</b><span>Probe placement, audit trail lineage, maker-checker, reconciliation and balance sanity checks, exception queues</span></div>
-  <div><b>Agentic and generative AI</b><span>Claude Code, LangGraph, self-hosted LLMs (Llama), RAG and vector databases, NVIDIA NIM, RAPIDS, ICR/OCR</span></div>
-  <div><b>Identity, security and private AI cloud</b><span>IdP architecture, out-of-band satcom 2FA/MFA, OAuth 2.0/OIDC, GPU clusters, Talos Kubernetes</span></div>
-  <div><b>Banking domain</b><span>Core banking, GL and FAH, reconciliation, FTP, IFRS 9/17, Basel II/III (AIRB, LCR, NSFR), Antasena reporting, custody, lending</span></div>
-  <div><b>Data and integration</b><span>Iceberg, MinIO, Trino, Dremio, ClickHouse, Spark, Kafka, Control-M, Teradata, SWIFT</span></div>
-  <div><b>Commercial leadership</b><span>USD 30M+ P&amp;L, 500+ team leadership, CxO advisory, vendor and SI management, ITIL, CMM Level 3</span></div>
-  <div><b>Engineering</b><span>Python, TypeScript, React, Java, C/C++, Playwright, Appium, Postman/Newman, Terraform, Ansible</span></div>
-</div>
+    <!-- Core Competencies: 3 Columns x 2 Rows -->
+    <section>
+      <h2 class="section-title">Core Competencies & Architecture Framework</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-category">Target Operating Model (TOM)</div>
+          <div class="skill-desc">
+            Value stream mapping, operational oversight readiness, hub-and-spoke shared services redesign, cross-system SLA architecture, legacy "lego block" AI wrapping.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Operational Oversight & Guardrails</div>
+          <div class="skill-desc">
+            Telemetry sensor placement, audit trail lineage, human-in-the-loop (HITL) exception gateways, maker-checker dual authorization, balance sheet sanity checks, RCSA.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Agentic AI & Generative Systems</div>
+          <div class="skill-desc">
+            Specification-driven development (Claude Code), multi-agent orchestration (LangGraph), self-hosted LLMs (Llama, Mistral), RAG, NVIDIA NIM, GPU Direct (RAPIDS/DALI).
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Identity, Zero Trust & Satcom IoT</div>
+          <div class="skill-desc">
+            Custom IdP design, out-of-band Satcom 2FA/MFA, OAuth 2.0 / OIDC, Zero-Trust, CWS (Connect Watch Secure) AI command platform, Satcom IoT firmware, BLE GATT.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Core BFSI, Retail & Regulatory</div>
+          <div class="skill-desc">
+            Core banking ledgers, Oracle GL / FAH, multi-entity reconciliation, batch scheduling (Control-M, Tivoli), Basel II/III/IV, IFRS 9/17, OJK Antesena, FTP, fraud graphs.
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-category">Commercial & Executive Leadership</div>
+          <div class="skill-desc">
+            P&L management ($30M+), 500+ team leadership across 5 business units, CxO advisory, vendor management, ITIL Service Architecture, CMM Level 3.
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h2>Professional Experience</h2>
+    <!-- Professional Experience -->
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
 
-<div class="job">
-<h3>Stardomes | Dubai, United Arab Emirates</h3>
-<p class="meta">Chief Technology Officer | April 2025 – Present</p>
-<p class="lede">Leads Stardomes AI Cloud Infrastructure: a private, high-performance and secure platform spanning an Identity Provider (IdP), out-of-band two-factor authentication, digital banking (web and mobile), satellite IoT firmware and the CWS (Connect Watch Secure) AI situational platform.</p>
-<ul>
-  <li><strong>Value stream architecture:</strong> connected digital customer touchpoints, identity verification, core banking ledger integration, satellite IoT and surveillance operations into one integrated platform.</li>
-  <li><strong>Identity and 2FA controls:</strong> designed the 2FA binding between banking backends and the IdP, with registration and deregistration lifecycles, audit data models and MFA session state machines.</li>
-  <li><strong>Out-of-band MFA:</strong> built a satellite MFA delivery layer using BLE GATT profiles and broadcast emulation, so authentication can continue without terrestrial telecom networks.</li>
-  <li><strong>Maker-checker integration:</strong> embedded enrolment state machines and dual-authorisation approvals across corporate and retail banking workflows.</li>
-  <li><strong>CWS AI platform:</strong> architected a multi-tier situational command and surveillance network combining edge computer vision, central analytics and satellite telemetry, with probes, human-in-the-loop validation and audit tracking.</li>
-  <li><strong>Agent-driven development:</strong> structured delivery into 10 specification-driven workstreams (5 backend, 5 frontend) executed by Claude Code, keeping implementation aligned to the architecture.</li>
-  <li><strong>Agentic QA:</strong> built a LangGraph-orchestrated test framework driving Playwright, Appium and Postman/Newman across authentication paths, approval state machines and audit-log validation.</li>
-  <li><strong>Sovereign AI compute:</strong> led technical scoping for a defence AI GPU cluster (DRDO): two companion RFPs and custom GPU and NVMe server design with QMax Systems.</li>
-</ul>
-</div>
+      <!-- STARDOMES -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-company">STARDOMES</span> &bull; <span class="job-role">Chief Technology Officer / Head of Platform Architecture</span>
+          </div>
+          <div class="job-meta">Dubai, United Arab Emirates | April 2025 – Present</div>
+        </div>
+        <div class="job-subtitle">High-assurance platform architecture spanning Identity (IdP/2FA), Digital Banking, CWS AI Surveillance, and Satcom IoT</div>
+        <ul class="bullet-list">
+          <li><strong>End-to-End Value Stream Architecture:</strong> Architected and delivered an integrated cross-functional value chain connecting digital customer touchpoints, cryptographic identity verification, core banking ledger integration, satellite IoT firmware, and real-time tactical surveillance.</li>
+          <li><strong>Operational Oversight & Guardrails in IdP & 2FA:</strong> Designed 2FA cryptographic binding integration between banking core backends and the proprietary IdP, enforcing strict registration/deregistration lifecycles, immutable audit data models, and MFA session state machines. Engineered out-of-band satellite MFA delivery over BLE GATT profiles and broadcast protocol emulation to guarantee operational continuity during terrestrial cellular failure.</li>
+          <li><strong>Reference Banking Application:</strong> Integrated IdP across OAuth 2.0/OIDC flows, biometric enrollment state machines, and dual-authorization maker-checker approval controls for high-risk corporate and retail operations. Built the banking web frontend in <strong>React 18, TypeScript, Vite, and Redux Toolkit</strong>.</li>
+          <li><strong>CWS (Connect Watch Secure) Tactical Platform:</strong> Architected CWS, a multi-tier AI-powered situational command, threat surveillance, and operational dispatch network fusing edge computer-vision inferencing, centralized predictive analytics, and satellite telemetry backhaul. Embedded end-to-end operational probes and sensory telemetry across mission-critical workflows (border security, VIP route protection, and tactical event dispatch).</li>
+          <li><strong>Pioneering Agent-Driven Development Methodology:</strong> Established an enterprise agent-driven delivery methodology: decomposed full-stack system architecture into unambiguous technical specification contracts executed autonomously by <strong>Claude Code</strong> across 10 concurrent workstreams (5 backend services, 5 frontend modules), achieving unprecedented cycle speed, mathematical rigor, and zero architectural drift.</li>
+          <li><strong>Agentic QA & Autonomous SLA Verification:</strong> Architected a multi-agent test automation framework using <strong>LangGraph</strong> to coordinate autonomous testing agents driving <strong>Playwright</strong> (web), <strong>Appium</strong> (mobile), and <strong>Postman/Newman</strong> (API microservices), automating end-to-end regression across multi-factor authentication paths, approval state machines, and audit log validation.</li>
+          <li><strong>Sovereign AI Infrastructure:</strong> Directed technical scoping and architecture for sovereign defense AI compute initiatives (multi-tier GPU clusters with NVIDIA NIM inference and high-density NVMe storage).</li>
+        </ul>
+      </div>
 
-<div class="job">
-<h3>INDEPENDENT ADVISORY | Singapore</h3>
-<p class="meta">Principal Consultant and Enterprise AI Advisor | May 2024 – February 2025</p>
-<p class="lede">Advised banks, AI platform firms and conglomerates on operating model redesign, AI wrapping of legacy systems, and operational oversight readiness.</p>
-<ul>
-  <li><strong>Botminds.ai / MUFG-group bank (Philippines):</strong> redesigned retail and SME loan origination, wrapping legacy core banking with AI ICR/OCR, repair agents and human-in-the-loop exception queues.</li>
-  <li><strong>Tier-1 ASEAN bank:</strong> architected Kubernetes GPU compute with NVIDIA NIM for document extraction and local LLM inference, with validation guardrails on regulatory data.</li>
-  <li><strong>InnData:</strong> advised on a self-hosted natural-language-to-SQL engine and a 35-node, 1 PB on-premise lakehouse (MinIO, Trino, Iceberg), with lineage and reconciliation probes.</li>
-  <li><strong>Infigos / Sinarmas Group:</strong> built transaction fraud surveillance and a group-wide synthetic-identity fraud-ring database; validated IFRS 4 to IFRS 17 transition models.</li>
-  <li><strong>Platform and legal-tech engagements:</strong> HM Land Registry conveyancing automation (PCC-AI, UK); blockchain strategy for FootballGoalCoin; Talos bare-metal Kubernetes and S3 disaster-recovery design.</li>
-</ul>
-</div>
+      <!-- INDEPENDENT ADVISORY -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-company">INDEPENDENT ADVISORY</span> &bull; <span class="job-role">Principal Consultant & Enterprise AI Advisor</span>
+          </div>
+          <div class="job-meta">Singapore | May 2024 – Feb 2025</div>
+        </div>
+        <div class="job-subtitle">Target Operating Model (TOM) redesign, legacy wrapping, and operational oversight readiness for enterprise clients</div>
+        <ul class="bullet-list">
+          <li><strong>Botminds.ai / MUFG-group bank (Philippines):</strong> Redesigned retail and SME loan origination, wrapping legacy core banking with AI ICR/OCR, repair agents and human-in-the-loop exception queues.</li>
+          <li><strong>Tier-1 ASEAN bank:</strong> Architected Kubernetes GPU compute with NVIDIA NIM for document extraction and local LLM inference, with validation guardrails on regulatory data.</li>
+          <li><strong>InnData:</strong> Advised on a self-hosted natural-language-to-SQL engine and a 35-node, 1 PB on-premise lakehouse (MinIO, Trino, Iceberg), with probes for query lineage and ledger reconciliation.</li>
+          <li><strong>Infigos / Sinarmas Group:</strong> Built transaction fraud surveillance and a group-wide synthetic-identity fraud-ring database; validated IFRS 4 to IFRS 17 transition models.</li>
+          <li><strong>Enterprise Cloud & Web3 Infrastructure:</strong> Built blockchain strategy for FootballGoalCoin; orchestrated bare-metal Kubernetes migrations into Talos OS; designed high-throughput S3 backup and disaster-recovery topologies.</li>
+          <li>HM Land Registry conveyancing automation (PCC-AI, UK); blockchain strategy for FootballGoalCoin; Talos bare-metal Kubernetes and S3 disaster-recovery design.</li>
+        </ul>
+      </div>
 
-<div class="job">
-<h3>MinIO | Singapore</h3>
-<p class="meta">Executive, APAC Solutions and GTM | October 2023 – May 2024</p>
-<ul>
-  <li>Defined object-storage lakehouse strategies for regional financial institutions, replacing HDFS with MinIO, Iceberg and Trino.</li>
-  <li>Led proofs of concept on throughput, query federation and compatibility with existing ETL pipelines.</li>
-  <li>Reviewed regulatory reporting infrastructure built on ClickHouse and MinIO; delivered a MinIO, Dremio and Superset environment for the region's largest forestry group.</li>
-</ul>
-</div>
+      <!-- MinIO -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-company">MinIO</span> &bull; <span class="job-role">Executive – APAC Solutions & GTM Leader</span>
+          </div>
+          <div class="job-meta">Singapore | October 2023 – May 2024</div>
+        </div>
+        <div class="job-subtitle">Modernizing fragmented data silos into high-performance, unified AI-ready data lakehouse architectures</div>
+        <ul class="bullet-list">
+          <li>Architected modern data lakehouse strategies based on MinIO object storage for premier regional financial institutions, displacing legacy HDFS architectures with S3/MinIO, Apache Iceberg, and Trino.</li>
+          <li>Led high-stakes proofs-of-concept (POCs) proving multi-gigabyte/sec throughput, query federation performance, and drop-in compatibility across enterprise ETL/ELT pipelines.</li>
+          <li>Designed analytical infrastructure reviews for large-scale regulatory reporting systems built on ClickHouse and MinIO.</li>
+        </ul>
+      </div>
 
-<div class="job">
-<h3>Lentra.ai | Singapore</h3>
-<p class="meta">Regional Solution Leader, ASEAN | December 2022 – August 2023</p>
-<ul>
-  <li><strong>Value stream redesign:</strong> mapped assisted and self-service loan onboarding, joining sales, verification, underwriting and operations into one SLA-governed pipeline.</li>
-  <li><strong>Decisioning checkpoints:</strong> embedded scorecards, policy decision trees and e-KYC and e-signature checkpoints into straight-through lending journeys.</li>
-  <li><strong>Customer data:</strong> deduplicated 80 million customer records using biometric and identity data for a leading Philippine e-wallet.</li>
-</ul>
-</div>
+      <!-- Lentra.ai -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-company">LENTRA.AI</span> &bull; <span class="job-role">Regional Solution Leader – ASEAN</span>
+          </div>
+          <div class="job-meta">Singapore | December 2022 – August 2023</div>
+        </div>
+        <div class="job-subtitle">Digital Lending SaaS Platform Architecture and Value Stream Re-Engineering</div>
+        <ul class="bullet-list">
+          <li><strong>Value Stream Re-Engineering:</strong> Mapped customer journeys across assisted and self-onboarding loan touchpoints, orchestrating disparate functional units (sales, verification, credit underwriting, operations) into a single SLA-governed pipeline.</li>
+          <li><strong>Algorithmic Decisioning & Policy Guardrails:</strong> Embedded dynamic risk scorecards, policy decision trees, and e-KYC/e-signature verification checkpoints into straight-through lending journeys.</li>
+          <li><strong>Massive Scale Data Modernization:</strong> Architected and executed deduplication of <strong>80 million customer records (CIF)</strong> using facial biometrics and multidimensional identity data for a premier Philippine digital wallet.</li>
+        </ul>
+      </div>
 
-<div class="job">
-<h3>NTT Indonesia Technology | Jakarta, Indonesia</h3>
-<p class="meta">Solutions Leader, Digital Transformation and Architecture | January 2020 – May 2022</p>
-<ul>
-  <li>Led a 130+ person digital transformation practice and a service architecture team of 5+ architects and 50+ BAU engineers.</li>
-  <li>Delivered containerisation, API gateway integration and ERP modernisation (AP/AR, billing, vendor and asset management).</li>
-  <li>Deployed banking and insurance platforms: asset and liability systems, digital banking GL, real-time customer 360 data lakes and insurance agency portals.</li>
-  <li>Set up ITIL-based Day-2 support models with multi-year cost estimation and account profitability tracking.</li>
-</ul>
-</div>
+      <!-- NTT INDONESIA -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-company">NTT INDONESIA TECHNOLOGY</span> &bull; <span class="job-role">Solutions Leader – Digital Transformation</span>
+          </div>
+          <div class="job-meta">Jakarta, Indonesia | January 2020 – May 2022</div>
+        </div>
+        <div class="job-subtitle">Executive oversight of Digital Transformation, Application Modernization, and Service Architecture</div>
+        <ul class="bullet-list">
+          <li>Led the Digital Transformation organization of <strong>130+ professionals</strong> (Enterprise Architects, BAs, Developers, Testers) and Service Architecture practice of 5+ Architects and 50+ BAU engineers.</li>
+          <li>Managed enterprise application modernizations, containerization (K8s/Docker), and API gateway rollouts across top banks, automotive giants, and Cinema 21.</li>
+          <li>Delivered core BFSI platforms covering asset/liability trading, digital banking GL, real-time customer data lakes, and agency portals for multinational insurers.</li>
+        </ul>
+      </div>
 
-<div class="job">
-<h3>PT Emerio Indonesia / NTT Digital Business Solutions | Jakarta, Indonesia</h3>
-<p class="meta">Director, Delivery, Products and Pre-Sales | February 2007 – January 2020</p>
-<ul>
-  <li><strong>Growth and P&amp;L:</strong> grew annual revenue from USD 0.5M (2007) to USD 30M+ (2020); built 5 profitable business units with 500+ staff.</li>
-  <li><strong>Delivery governance:</strong> oversaw 200+ projects a year for 50+ clients with under 5% schedule and cost variance.</li>
-  <li><strong>Regulatory reporting products:</strong> built Emerio's financial data model and Bank Indonesia / OJK Antasena suite (LBU, LBBU, SLIK, LKPBU) for 10+ banks; two were recognised as the country's best implementers.</li>
-  <li><strong>Risk and accounting:</strong> led Basel II/III (AIRB, LCR, NSFR, XBRL), IAS 32/39 and IFRS 9 for Standard Chartered Indonesia, Bank Permata and Commonwealth Bank Indonesia.</li>
-  <li><strong>Finance transformation:</strong> delivered OFSAA, Oracle GL with FAH, Hyperion planning and fund transfer pricing for Bank Danamon, BTPN, PNM, BCA, Bank Panin and Cinema 21.</li>
-</ul>
-</div>
+      <!-- EMERIO / NTT DBS -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <span class="job-company">PT EMERIO INDONESIA / NTT DIGITAL BUSINESS SOLUTIONS</span> &bull; <span class="job-role">Director – Delivery, Products & Presales</span>
+          </div>
+          <div class="job-meta">Jakarta, Indonesia | February 2007 – January 2020</div>
+        </div>
+        <div class="job-subtitle">Commercial leadership, P&L management, and enterprise delivery scaling across Southeast Asia</div>
+        <ul class="bullet-list">
+          <li><strong>60x Commercial Scaling:</strong> Grew business from <strong>USD 500K in 2007 to over USD 30M+ by 2020</strong>; built 5 self-sustaining business units with <strong>500+ employees</strong> across BFSI verticals and technology horizontals.</li>
+          <li><strong>Delivery Governance:</strong> Governed 200+ annual project deliverables across 50+ enterprise accounts, maintaining less than 5% schedule and cost variance.</li>
+          <li><strong>Proprietary Regulatory Products:</strong> Designed and deployed Emerio's proprietary financial data model and regulatory reporting product for <strong>Bank Indonesia / OJK Antesena</strong> across 10+ banks (with 2 recognized as best national implementers).</li>
+          <li><strong>Risk & Finance Transformation:</strong> Delivered Basel II/III (AIRB, LCR, NSFR), IFRS 32/39, and IFRS 9 for Standard Chartered Indonesia, Bank Permata, and Commonwealth Bank. Deployed Oracle General Ledger, FAH, and OFSAA across top-tier Indonesian institutions.</li>
+        </ul>
+      </div>
 
-<div class="job">
-<h3>Foundational Operations and Hub-and-Spoke Redesign</h3>
-<ul>
-  <li><strong>OCBC Bank, Singapore | Extraction and Scheduling Lead, Basel II | 2005 – 2007:</strong> integrated legacy warehouses into the Basel II repository with Teradata loaders, and tuned Control-M scheduling to meet regulatory SLAs.</li>
-  <li><strong>Standard Chartered Scope International, Chennai | Product Manager | 2002 – 2005:</strong> headed custody, Multi-Business Platform and ATLAS teams (100+ staff and vendor engineers from TCS and HCL). Implemented the centrally hubbed, multi-tenant New Custody System in the Atos Hong Kong data centre (Project Cocteau), and SCI 2.0 centralised credit limit management with local branch authorisation.</li>
-  <li><strong>Standard Chartered Bank, Singapore | Systems Analyst | 1998 – 2002:</strong> production support across 10 countries; SWIFT, Hogan and Sybase interfaces; Control-M automation for 1,000+ daily end-of-day and beginning-of-day jobs.</li>
-  <li><strong>Polaris Software Lab, Chennai | Consultant | 1997 – 1998:</strong> user interface and CICS mainframe messaging development for the Citibank SABRE project.</li>
-</ul>
-</div>
+      <!-- Earlier Career Table -->
+      <div class="job">
+        <div class="job-role" style="font-size: 13.5px; margin-bottom: 6px;">Foundational Enterprise Operations & Hub-and-Spoke Redesign (1997 – 2007)</div>
+        <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 6px; font-style: italic;">The direct operational precursors to modern AI agent wrapping:</div>
+        <table class="early-career-table">
+          <tr>
+            <td class="year">2005 – 2007</td>
+            <td class="role-title">OCBC Singapore &bull; Extraction & Scheduling Lead – BASEL II Program</td>
+            <td>Integrated legacy AMP data warehouses with central BASEL II repository via Teradata MultiLoad/FastLoad; optimized batch job scheduling (<strong>BMC Control-M</strong>) and SLAs.</td>
+          </tr>
+          <tr>
+            <td class="year">2002 – 2005</td>
+            <td class="role-title">Standard Chartered Scope International &bull; Product Manager & Head of ISCI Custody</td>
+            <td>Led global custody engineering (100+ vendor engineers). Delivered centrally hubbed multitenant NCS in Atos HK (<strong>Project Cocteau</strong>), centralizing execution while preserving local SOPs; implemented SCI 2.0 Credit Limit Management.</td>
+          </tr>
+          <tr>
+            <td class="year">1998 – 2002</td>
+            <td class="role-title">Standard Chartered Bank Singapore &bull; Systems Analyst (SEA)</td>
+            <td>Managed production support and custodial platforms across 10 countries; developed SWIFT/Hogan/Sybase interfaces and Control-M scheduling automation for 1,000+ daily EOD/BOD batch jobs.</td>
+          </tr>
+          <tr>
+            <td class="year">1997 – 1998</td>
+            <td class="role-title">Polaris Software Lab &bull; Consultant</td>
+            <td>Delivered UI and CICS mainframe messaging interfaces for the Citibank SABRE project.</td>
+          </tr>
+        </table>
+      </div>
+    </section>
 
-<h2>Education and Training</h2>
-<ul>
-  <li><strong>Oxford Blockchain Strategy Programme</strong>, Saïd Business School, University of Oxford, 2022 (88%)</li>
-  <li><strong>BSc Mathematics</strong>, Loyola College, Chennai, 1994</li>
-  <li><strong>Advanced Diploma in RDBMS</strong> (Sybase, PowerBuilder), Software Solutions Integrated, 1995 (Grade A)</li>
-  <li><strong>Higher Diploma in Software Engineering</strong>, Apple Industries, Chennai, 1993 (88%)</li>
-  <li><strong>Diploma in Computer Applications</strong>, NCC Education, United Kingdom, 1992 (77%)</li>
-  <li><strong>Professional training:</strong> IFRS 9 (PwC); Information Security and Risk Management, ITIL Service Management and Business Continuity, WebSphere Administration (Standard Chartered); CMM Level 3 (Scope International)</li>
-</ul>
+    <!-- Education & Training -->
+    <section>
+      <h2 class="section-title">Education & Credentials</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 9px; break-inside: avoid; page-break-inside: avoid;">
+        <div class="skill-card">
+          <div style="font-weight: 700; color: var(--primary);">Oxford Blockchain Strategy Programme (Grade: 88%)</div>
+          <div style="font-size: 11.5px; color: var(--text-muted);">Saïd Business School, University of Oxford &bull; 2022</div>
+        </div>
+        <div class="skill-card">
+          <div style="font-weight: 700; color: var(--primary);">Bachelor of Science (B.Sc.) in Mathematics</div>
+          <div style="font-size: 11.5px; color: var(--text-muted);">Loyola College, Chennai, India &bull; 1994</div>
+        </div>
+        <div class="skill-card">
+          <div style="font-weight: 700; color: var(--primary);">Higher Diploma in Software Engineering (Average: 88%)</div>
+          <div style="font-size: 11.5px; color: var(--text-muted);">Apple Industries Ltd, Chennai, India &bull; 1993</div>
+        </div>
+        <div class="skill-card">
+          <div style="font-weight: 700; color: var(--primary);">Diploma in Computer Applications (Average: 77%)</div>
+          <div style="font-size: 11.5px; color: var(--text-muted);">NCC Education, United Kingdom &bull; 1992</div>
+        </div>
+      </div>
 
-</main>
+      <div class="cert-box">
+        <strong style="color: var(--primary);">Professional Certifications & Training:</strong> 
+        IFRS 9 Certification (PwC through NTT) &bull; 
+        Information Security & Risk Management (Standard Chartered Bank) &bull; 
+        ITIL Service Management & Business Continuity (Standard Chartered Bank) &bull; 
+        IBM WebSphere System Administration (Troy Systems / SCB) &bull; 
+        CMM Level 3 Software Engineering Process (Scope International).
+      </div>
+    </section>
+  </div>
+
 </body>
 </html>
